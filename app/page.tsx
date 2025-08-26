@@ -701,7 +701,7 @@ export default function ChashuLandingPage() {
               <div className="bg-green-100 p-6 rounded-lg border border-green-200">
                 <div className="text-center">
                   <a
-                    href="https://www.amazon.co.jp/stores/page/222C75F5-2370-44E0-8D9A-B26A33B10DCA"
+                    href="https://www.amazon.co.jp/stores/page/485187F9-700A-4C89-85F3-3E4A7A7414EF"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block"
@@ -781,7 +781,7 @@ export default function ChashuLandingPage() {
               <div className="bg-green-100 p-6 rounded-lg border border-green-200">
                 <div className="text-center">
                   <a
-                    href="https://www.amazon.co.jp/stores/page/485187F9-700A-4C89-85F3-3E4A7A7414EF"
+                    href="https://www.amazon.co.jp/stores/page/222C75F5-2370-44E0-8D9A-B26A33B10DCA"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block"
