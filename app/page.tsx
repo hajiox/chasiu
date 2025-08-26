@@ -105,11 +105,7 @@ export default function ChashuLandingPage() {
             className="text-2xl md:text-4xl lg:text-6xl font-bold mb-4 md:mb-6 text-gray-900 leading-tight"
             style={{ wordBreak: "keep-all", lineBreak: "strict" }}
           >
-            累計10万セット販売突破！
-            <br />
-            ご家庭で"ラーメン店の味"を
-            <br className="md:hidden" />
-            再現。
+            累計10万セット販売突破！ご家庭で"ラーメン店の味"を再現。
           </h1>
           <div
             className="max-w-4xl mx-auto text-sm md:text-lg text-gray-700 leading-relaxed space-y-3 md:space-y-4"
@@ -126,11 +122,7 @@ export default function ChashuLandingPage() {
             </p>
             <p>これまでに累計10万セットを販売し、多くのお客様にご好評いただいています。</p>
             <p className="font-bold text-lg md:text-xl text-amber-600">
-              ぜひこの機会に、ラーメン店さながらの
-              <br className="md:hidden" />
-              本格チャーシューをご家庭で
-              <br className="md:hidden" />
-              ご堪能ください。送料は無料です。
+              ぜひこの機会に、ラーメン店さながらの本格チャーシューをご家庭でご堪能ください。送料は無料です。
             </p>
           </div>
         </div>
@@ -143,11 +135,7 @@ export default function ChashuLandingPage() {
             className="text-2xl md:text-3xl font-bold text-center mb-6 md:mb-8 text-gray-900"
             style={{ wordBreak: "keep-all", lineBreak: "strict" }}
           >
-            いつもありがとうございます。
-            <br className="md:hidden" />
-            沢山のお客様に
-            <br className="md:hidden" />
-            ご好評頂いています。
+            いつもありがとうございます。沢山のお客様にご好評頂いています。
           </h2>
 
           {/* Top Row - Awards */}
