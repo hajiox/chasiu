@@ -5,19 +5,21 @@ import { GeistMono } from "geist/font/mono"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "ラーメン屋が作る本物のチャーシュー | 累計10万セット販売突破 | 会津ブランド館",
+  title: "会津ブランド館 極上チャーシュー | 楽天月間優良ショップ受賞の本格派",
   description:
-    '累計10万セット販売突破！ご家庭で"ラーメン店の味"を再現。職人が作る本格チャーシューを冷凍・レトルトでお届け。送料無料・即日発送対応。',
+    "楽天市場月間優良ショップ受賞！会津の老舗が作る極上チャーシュー。冷凍・レトルト2種類をご用意。職人の技が光る本格的な味をご家庭で。全国配送対応。",
+  metadataBase: new URL("https://chasieu.aizu-syokubura.com"),
   openGraph: {
-    title: "ラーメン屋が作る本物のチャーシュー | 累計10万セット販売突破",
+    title: "会津ブランド館 極上チャーシュー | 楽天月間優良ショップ受賞",
     description:
-      'ご家庭で"ラーメン店の味"を再現。職人が作る本格チャーシューを冷凍・レトルトでお届け。送料無料・即日発送対応。',
+      "楽天市場月間優良ショップ受賞！会津の老舗が作る極上チャーシュー。冷凍・レトルト2種類をご用意。職人の技が光る本格的な味をご家庭で。",
+    url: "https://chasieu.aizu-syokubra.com",
     images: [
       {
-        url: "/placeholder.svg?height=630&width=1200",
+        url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/OGP_%E3%82%A2%E3%83%BC%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%201.jpg-BMdcg9s5JIa43MvynMs4FFcxtEqr63.jpeg",
         width: 1200,
         height: 630,
-        alt: "ラーメン屋が作る本物のチャーシュー",
+        alt: "会津ブランド館の極上チャーシュー - 箸で持ち上げられた美味しそうなチャーシュー",
       },
     ],
     locale: "ja_JP",
@@ -26,11 +28,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ラーメン屋が作る本物のチャーシュー | 累計10万セット販売突破",
-    description: 'ご家庭で"ラーメン店の味"を再現。職人が作る本格チャーシューをお届け。',
-    images: ["/placeholder.svg?height=630&width=1200"],
+    title: "会津ブランド館 極上チャーシュー | 楽天月間優良ショップ受賞",
+    description: "楽天市場月間優良ショップ受賞！会津の老舗が作る極上チャーシューをご家庭で。",
+    images: [
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/OGP_%E3%82%A2%E3%83%BC%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%201.jpg-BMdcg9s5JIa43MvynMs4FFcxtEqr63.jpeg",
+    ],
   },
-  keywords: "チャーシュー,ラーメン,冷凍食品,レトルト,会津ブランド館,本格,職人,家庭用",
+  keywords:
+    "チャーシュー,会津ブランド館,楽天月間優良ショップ,冷凍チャーシュー,レトルトチャーシュー,福島県,会津若松,本格派,職人,ラーメン具材",
     generator: 'v0.app'
 }
 
