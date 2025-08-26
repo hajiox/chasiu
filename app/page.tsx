@@ -101,12 +101,20 @@ export default function ChashuLandingPage() {
           <Badge className="mb-4 text-sm md:text-lg bg-amber-600 text-white hover:bg-amber-700">
             ラーメン屋が作る本物のチャーシュー
           </Badge>
-          <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold mb-4 md:mb-6 text-gray-900 leading-tight">
+          <h1
+            className="text-2xl md:text-4xl lg:text-6xl font-bold mb-4 md:mb-6 text-gray-900 leading-tight"
+            style={{ wordBreak: "keep-all", lineBreak: "strict" }}
+          >
             累計10万セット販売突破！
             <br />
-            ご家庭で"ラーメン店の味"を再現。
+            ご家庭で"ラーメン店の味"を
+            <br className="md:hidden" />
+            再現。
           </h1>
-          <div className="max-w-4xl mx-auto text-sm md:text-lg text-gray-700 leading-relaxed space-y-3 md:space-y-4">
+          <div
+            className="max-w-4xl mx-auto text-sm md:text-lg text-gray-700 leading-relaxed space-y-3 md:space-y-4"
+            style={{ wordBreak: "keep-all", lineBreak: "strict", overflowWrap: "break-word" }}
+          >
             <p>
               ラーメンを自宅で作るとき、一番手に入りにくい具材は「チャーシュー」です。スーパーでも見かけますが、多くは加工肉のような食感で、本格的な味わいとは異なります。
             </p>
@@ -118,7 +126,11 @@ export default function ChashuLandingPage() {
             </p>
             <p>これまでに累計10万セットを販売し、多くのお客様にご好評いただいています。</p>
             <p className="font-bold text-lg md:text-xl text-amber-600">
-              ぜひこの機会に、ラーメン店さながらの本格チャーシューをご家庭でご堪能ください。送料は無料です。
+              ぜひこの機会に、ラーメン店さながらの
+              <br className="md:hidden" />
+              本格チャーシューをご家庭で
+              <br className="md:hidden" />
+              ご堪能ください。送料は無料です。
             </p>
           </div>
         </div>
@@ -127,8 +139,15 @@ export default function ChashuLandingPage() {
       {/* Trust Section */}
       <section className="py-8 md:py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 md:mb-8 text-gray-900">
-            いつもありがとうございます。沢山のお客様にご好評頂いています。
+          <h2
+            className="text-2xl md:text-3xl font-bold text-center mb-6 md:mb-8 text-gray-900"
+            style={{ wordBreak: "keep-all", lineBreak: "strict" }}
+          >
+            いつもありがとうございます。
+            <br className="md:hidden" />
+            沢山のお客様に
+            <br className="md:hidden" />
+            ご好評頂いています。
           </h2>
 
           {/* Top Row - Awards */}
@@ -225,7 +244,10 @@ export default function ChashuLandingPage() {
               </div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">① 低温長時間調理 × 炭酸の力</h3>
-                <p className="text-gray-700 leading-relaxed">
+                <p
+                  className="text-gray-700 leading-relaxed"
+                  style={{ wordBreak: "keep-all", lineBreak: "strict", overflowWrap: "break-word" }}
+                >
                   丁寧に低温で時間をかけて煮込むことで、豚肉の旨味を逃さず閉じ込めます。さらに炭酸を加えることで豚特有の臭みを取り除き、肉をしっとり柔らかく仕上げました。ご家庭ではなかなか再現できない、プロの工夫です。
                 </p>
               </CardContent>
@@ -243,7 +265,10 @@ export default function ChashuLandingPage() {
               </div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">② 秘伝の"育てるタレ"</h3>
-                <p className="text-gray-700 leading-relaxed">
+                <p
+                  className="text-gray-700 leading-relaxed"
+                  style={{ wordBreak: "keep-all", lineBreak: "strict", overflowWrap: "break-word" }}
+                >
                   当店のチャーシューは、継ぎ足しで旨味を重ねた特製ダレに一晩漬け込んでいます。肉汁や旨味が溶け込んだ濃厚なタレは、ゼラチン状になるほど濃密。熱々の状態で漬け込むことで、肉の奥深くまでしっかり味が染み込みます。
                 </p>
               </CardContent>
@@ -261,7 +286,10 @@ export default function ChashuLandingPage() {
               </div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">③ 熟練職人の手仕事</h3>
-                <p className="text-gray-700 leading-relaxed">
+                <p
+                  className="text-gray-700 leading-relaxed"
+                  style={{ wordBreak: "keep-all", lineBreak: "strict", overflowWrap: "break-word" }}
+                >
                   大量生産ではなく、職人が一つひとつ丁寧に仕込み。部位ごとの特性を見極め、余計な処理をせずに"豚肉そのものの美味しさ"を最大限に引き出しています。手間を惜しまないからこそ生まれる、専門店ならではの味わいです。
                 </p>
               </CardContent>
@@ -449,7 +477,7 @@ export default function ChashuLandingPage() {
               <Card className="overflow-hidden bg-white border-gray-200 shadow-md">
                 <div className="relative aspect-square">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%81%E3%83%A3%E3%83%BC%E3%82%B7%E3%83%A5%E3%83%BC%E3%81%9F%E3%82%8C.jpg-KWGPebXrM4Wz0wSjsx78RIplx6Uv9o.jpeg"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%81%8A%E5%AE%A2%E6%A7%98%E3%81%AE%E6%96%87%E5%8F%B7.jpg-KWGPebXrM4Wz0wSjsx78RIplx6Uv9o.jpeg"
                     alt="チャーシュー専用だれ"
                     fill
                     className="object-cover"
@@ -609,7 +637,10 @@ export default function ChashuLandingPage() {
                   className="object-cover"
                 />
               </div>
-              <p className="text-lg leading-relaxed text-gray-700">
+              <p
+                className="text-lg leading-relaxed text-gray-700"
+                style={{ wordBreak: "keep-all", lineBreak: "strict", overflowWrap: "break-word" }}
+              >
                 スーパーでは手に入らない"本物"を、自分の部屋でゆっくり味わう。至高の一杯がここにあります。
               </p>
             </div>
@@ -623,7 +654,10 @@ export default function ChashuLandingPage() {
                   className="object-cover"
                 />
               </div>
-              <p className="text-lg leading-relaxed text-gray-700">
+              <p
+                className="text-lg leading-relaxed text-gray-700"
+                style={{ wordBreak: "keep-all", lineBreak: "strict", overflowWrap: "break-word" }}
+              >
                 家族みんなで分け合える本物チャーシュー。食卓に団らんと絆を生む、特別な一皿です。
               </p>
             </div>
@@ -637,7 +671,10 @@ export default function ChashuLandingPage() {
                   className="object-cover"
                 />
               </div>
-              <p className="text-lg leading-relaxed text-gray-700">
+              <p
+                className="text-lg leading-relaxed text-gray-700"
+                style={{ wordBreak: "keep-all", lineBreak: "strict", overflowWrap: "break-word" }}
+              >
                 外食を減らしても贅沢はできる。物価高の今こそ、家で本格ラーメンを。頑張る自分へのご褒美に。
               </p>
             </div>
