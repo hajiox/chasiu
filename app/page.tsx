@@ -6,10 +6,6 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 export default function ChashuLandingPage() {
-  const handlePurchaseClick = (marketplace: string, productType: string) => {
-    console.log(`Purchase clicked: ${marketplace} - ${productType}`)
-  }
-
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" })
   }
@@ -654,15 +650,22 @@ export default function ChashuLandingPage() {
               {/* Yahoo Shopping */}
               <div className="bg-pink-100 p-6 rounded-lg border border-pink-200">
                 <div className="text-center">
-                  <div className="bg-white p-4 rounded-lg mb-4 mx-auto max-w-xs">
-                    <Image
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/yahoo%E8%B3%BC%E5%85%A5%E3%83%9C%E3%82%BF%E3%83%B3-01-o2By6df7JqQxsMmDbxQkB96j4xvzo7.png"
-                      alt="Yahoo!で購入"
-                      width={200}
-                      height={150}
-                      className="object-contain mx-auto"
-                    />
-                  </div>
+                  <a
+                    href="https://store.shopping.yahoo.co.jp/aizubrandhall/a5b9a5bfa5.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <div className="bg-white p-4 rounded-lg mb-4 mx-auto max-w-xs hover:shadow-md transition-shadow">
+                      <Image
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/yahoo%E8%B3%BC%E5%85%A5%E3%83%9C%E3%82%BF%E3%83%B3-01-o2By6df7JqQxsMmDbxQkB96j4xvzo7.png"
+                        alt="Yahoo!で購入"
+                        width={200}
+                        height={150}
+                        className="object-contain mx-auto"
+                      />
+                    </div>
+                  </a>
                   <h4 className="font-bold mb-2 text-gray-900">Yahoo!ショッピング</h4>
                   <p className="text-sm text-gray-600 mb-4">PayPayポイントが貯まる使えるショッピングモールはこちら</p>
                 </div>
@@ -671,15 +674,22 @@ export default function ChashuLandingPage() {
               {/* Rakuten */}
               <div className="bg-blue-100 p-6 rounded-lg border border-blue-200">
                 <div className="text-center">
-                  <div className="bg-white p-4 rounded-lg mb-4 mx-auto max-w-xs">
-                    <Image
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E8%B3%BC%E5%85%A5%E3%83%9C%E3%82%BF%E3%83%B3-01-T1kz4cuzdoGCnAcHvSwGBuBQsfKTIJ.png"
-                      alt="楽天で購入"
-                      width={200}
-                      height={150}
-                      className="object-contain mx-auto"
-                    />
-                  </div>
+                  <a
+                    href="https://item.rakuten.co.jp/aizubrandhall/c/0000000024/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <div className="bg-white p-4 rounded-lg mb-4 mx-auto max-w-xs hover:shadow-md transition-shadow">
+                      <Image
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E8%B3%BC%E5%85%A5%E3%83%9C%E3%82%BF%E3%83%B3-01-T1kz4cuzdoGCnAcHvSwGBuBQsfKTIJ.png"
+                        alt="楽天で購入"
+                        width={200}
+                        height={150}
+                        className="object-contain mx-auto"
+                      />
+                    </div>
+                  </a>
                   <h4 className="font-bold mb-2 text-gray-900">楽天市場</h4>
                   <p className="text-sm text-gray-600 mb-4">
                     楽天ポイントが使える国内最大級のショッピングモールはこちら
@@ -690,15 +700,22 @@ export default function ChashuLandingPage() {
               {/* Amazon */}
               <div className="bg-green-100 p-6 rounded-lg border border-green-200">
                 <div className="text-center">
-                  <div className="bg-white p-4 rounded-lg mb-4 mx-auto max-w-xs">
-                    <Image
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Amazon%E8%B3%BC%E5%85%A5%E3%83%9C%E3%82%BF%E3%83%B3-01-XpiFG2txGHCy5bDQenrvFikQe3Alx7.png"
-                      alt="Amazonで購入"
-                      width={200}
-                      height={150}
-                      className="object-contain mx-auto"
-                    />
-                  </div>
+                  <a
+                    href="https://www.amazon.co.jp/stores/page/222C75F5-2370-44E0-8D9A-B26A33B10DCA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <div className="bg-white p-4 rounded-lg mb-4 mx-auto max-w-xs hover:shadow-md transition-shadow">
+                      <Image
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Amazon%E8%B3%BC%E5%85%A5%E3%83%9C%E3%82%BF%E3%83%B3-01-XpiFG2txGHCy5bDQenrvFikQe3Alx7.png"
+                        alt="Amazonで購入"
+                        width={200}
+                        height={150}
+                        className="object-contain mx-auto"
+                      />
+                    </div>
+                  </a>
                   <h4 className="font-bold mb-2 text-gray-900">Amazon</h4>
                   <p className="text-sm text-gray-600 mb-4">世界最大のショッピングモールでのお買い物はこちら</p>
                 </div>
@@ -713,15 +730,22 @@ export default function ChashuLandingPage() {
               {/* Yahoo Shopping */}
               <div className="bg-pink-100 p-6 rounded-lg border border-pink-200">
                 <div className="text-center">
-                  <div className="bg-white p-4 rounded-lg mb-4 mx-auto max-w-xs">
-                    <Image
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/yahoo%E8%B3%BC%E5%85%A5%E3%83%9C%E3%82%BF%E3%83%B3-01-o2By6df7JqQxsMmDbxQkB96j4xvzo7.png"
-                      alt="Yahoo!で購入"
-                      width={200}
-                      height={150}
-                      className="object-contain mx-auto"
-                    />
-                  </div>
+                  <a
+                    href="https://store.shopping.yahoo.co.jp/aizubrandhall/b7e3b0c2a5.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <div className="bg-white p-4 rounded-lg mb-4 mx-auto max-w-xs hover:shadow-md transition-shadow">
+                      <Image
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/yahoo%E8%B3%BC%E5%85%A5%E3%83%9C%E3%82%BF%E3%83%B3-01-o2By6df7JqQxsMmDbxQkB96j4xvzo7.png"
+                        alt="Yahoo!で購入"
+                        width={200}
+                        height={150}
+                        className="object-contain mx-auto"
+                      />
+                    </div>
+                  </a>
                   <h4 className="font-bold mb-2 text-gray-900">Yahoo!ショッピング</h4>
                   <p className="text-sm text-gray-600 mb-4">PayPayポイントが貯まる使えるショッピングモールはこちら</p>
                 </div>
@@ -730,15 +754,22 @@ export default function ChashuLandingPage() {
               {/* Rakuten */}
               <div className="bg-blue-100 p-6 rounded-lg border border-blue-200">
                 <div className="text-center">
-                  <div className="bg-white p-4 rounded-lg mb-4 mx-auto max-w-xs">
-                    <Image
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E8%B3%BC%E5%85%A5%E3%83%9C%E3%82%BF%E3%83%B3-01-T1kz4cuzdoGCnAcHvSwGBuBQsfKTIJ.png"
-                      alt="楽天で購入"
-                      width={200}
-                      height={150}
-                      className="object-contain mx-auto"
-                    />
-                  </div>
+                  <a
+                    href="https://item.rakuten.co.jp/aizubrandhall/c/0000000016/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <div className="bg-white p-4 rounded-lg mb-4 mx-auto max-w-xs hover:shadow-md transition-shadow">
+                      <Image
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E8%B3%BC%E5%85%A5%E3%83%9C%E3%82%BF%E3%83%B3-01-T1kz4cuzdoGCnAcHvSwGBuBQsfKTIJ.png"
+                        alt="楽天で購入"
+                        width={200}
+                        height={150}
+                        className="object-contain mx-auto"
+                      />
+                    </div>
+                  </a>
                   <h4 className="font-bold mb-2 text-gray-900">楽天市場</h4>
                   <p className="text-sm text-gray-600 mb-4">
                     楽天ポイントが使える国内最大級のショッピングモールはこちら
@@ -749,15 +780,22 @@ export default function ChashuLandingPage() {
               {/* Amazon */}
               <div className="bg-green-100 p-6 rounded-lg border border-green-200">
                 <div className="text-center">
-                  <div className="bg-white p-4 rounded-lg mb-4 mx-auto max-w-xs">
-                    <Image
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Amazon%E8%B3%BC%E5%85%A5%E3%83%9C%E3%82%BF%E3%83%B3-01-XpiFG2txGHCy5bDQenrvFikQe3Alx7.png"
-                      alt="Amazonで購入"
-                      width={200}
-                      height={150}
-                      className="object-contain mx-auto"
-                    />
-                  </div>
+                  <a
+                    href="https://www.amazon.co.jp/stores/page/485187F9-700A-4C89-85F3-3E4A7A7414EF"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <div className="bg-white p-4 rounded-lg mb-4 mx-auto max-w-xs hover:shadow-md transition-shadow">
+                      <Image
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Amazon%E8%B3%BC%E5%85%A5%E3%83%9C%E3%82%BF%E3%83%B3-01-XpiFG2txGHCy5bDQenrvFikQe3Alx7.png"
+                        alt="Amazonで購入"
+                        width={200}
+                        height={150}
+                        className="object-contain mx-auto"
+                      />
+                    </div>
+                  </a>
                   <h4 className="font-bold mb-2 text-gray-900">Amazon</h4>
                   <p className="text-sm text-gray-600 mb-4">世界最大のショッピングモールでのお買い物はこちら</p>
                 </div>
