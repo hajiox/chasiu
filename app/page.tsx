@@ -188,21 +188,20 @@ export default function ChashuLandingPage() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col gap-3 md:gap-4 justify-center mt-8 md:mt-12 px-4">
+          <div className="flex flex-col gap-4 justify-center mt-8 md:mt-12 px-4 max-w-md mx-auto">
             <Button
               size="lg"
-              className="bg-amber-600 hover:bg-amber-700 text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg w-full md:w-auto"
+              className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 w-full"
               onClick={() => scrollToSection("purchase")}
             >
               商品売場へ行く
             </Button>
             <Button
               size="lg"
-              variant="outline"
-              className="border-amber-600 text-amber-600 hover:bg-amber-50 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg bg-transparent w-full md:w-auto"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-base font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 w-full"
               onClick={() => scrollToSection("features")}
             >
-              商品特徴をもっと知る（下記をご覧ください）
+              商品特徴をもっと知る
             </Button>
           </div>
         </div>
@@ -526,37 +525,45 @@ export default function ChashuLandingPage() {
       </section>
 
       {/* Reviews Section */}
-      <section id="reviews" className="py-16 bg-gray-50">
+      <section id="reviews" className="py-8 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4 text-gray-900">お客様の声</h2>
-          <p className="text-center text-gray-600 mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4 text-gray-900">お客様の声</h2>
+          <p className="text-center text-gray-600 mb-8 md:mb-12 text-sm md:text-base px-2">
             これらは実際のECサイトに投稿されているものを抜粋させて頂きました。ご購入の際のご参考にどうぞ
           </p>
 
-          <div className="space-y-6 max-w-4xl mx-auto">
+          <div className="space-y-4 md:space-y-6 max-w-4xl mx-auto">
             {reviews.map((review, i) => (
-              <Card key={i} className="p-6 bg-gray-50 border-gray-200">
-                <div className="flex items-start gap-4">
+              <Card key={i} className="p-4 md:p-6 bg-white border-gray-200 shadow-sm">
+                <div className="flex items-start gap-3 md:gap-4">
                   <Image
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%81%8A%E5%AE%A2%E6%A7%98%E3%81%AE%E5%A3%B0%E7%94%B7%E6%80%A7%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88%EF%BC%88AI%EF%BC%89.jpg-vtfT6kIozW2PCIgSlbHhvpRa1H3IAA.jpeg"
                     alt={`お客様 ${i + 1}`}
-                    width={48}
-                    height={48}
-                    className="rounded-full"
+                    width={40}
+                    height={40}
+                    className="rounded-full w-8 h-8 md:w-12 md:h-12 flex-shrink-0"
                   />
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <h3 className="font-bold text-gray-900">お客様（{review.source}）</h3>
-                      <div className="flex text-yellow-500">
-                        {[...Array(review.rating)].map((_, index) => (
-                          <span key={index}>★</span>
-                        ))}
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-2 md:mb-3">
+                      <h3 className="font-bold text-gray-900 text-sm md:text-base">お客様（{review.source}）</h3>
+                      <div className="flex items-center gap-2">
+                        <div className="flex text-yellow-500 text-sm">
+                          {[...Array(review.rating)].map((_, index) => (
+                            <span key={index}>★</span>
+                          ))}
+                        </div>
+                        <Badge
+                          variant="outline"
+                          className="text-xs border-gray-400 text-gray-600 hidden sm:inline-flex"
+                        >
+                          {review.product}を購入されたお客様
+                        </Badge>
+                        <Badge variant="outline" className="text-xs border-gray-400 text-gray-600 sm:hidden">
+                          {review.product}
+                        </Badge>
                       </div>
-                      <Badge variant="outline" className="text-xs border-gray-400 text-gray-600">
-                        {review.product}を購入されたお客様
-                      </Badge>
                     </div>
-                    <p className="text-gray-700 leading-relaxed">「{review.comment}」</p>
+                    <p className="text-gray-700 leading-relaxed text-sm md:text-base">「{review.comment}」</p>
                   </div>
                 </div>
               </Card>
@@ -639,16 +646,16 @@ export default function ChashuLandingPage() {
       </section>
 
       {/* Purchase Section */}
-      <section id="purchase" className="py-16 bg-gray-50">
+      <section id="purchase" className="py-8 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">ご購入はこちらから</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-gray-900">ご購入はこちらから</h2>
 
           {/* Frozen Chashu Purchase Section */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-center mb-8 text-blue-600">冷凍チャーシュー</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="mb-12 md:mb-16">
+            <h3 className="text-2xl md:text-2xl font-bold text-center mb-6 md:mb-8 text-blue-600">冷凍チャーシュー</h3>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
               {/* Yahoo Shopping */}
-              <div className="bg-pink-100 p-6 rounded-lg border border-pink-200">
+              <div className="bg-pink-100 p-4 md:p-6 rounded-lg border border-pink-200">
                 <div className="text-center">
                   <a
                     href="https://store.shopping.yahoo.co.jp/aizubrandhall/a5b9a5bfa5.html"
@@ -656,7 +663,7 @@ export default function ChashuLandingPage() {
                     rel="noopener noreferrer"
                     className="block"
                   >
-                    <div className="bg-white p-4 rounded-lg mb-4 mx-auto max-w-xs hover:shadow-md transition-shadow">
+                    <div className="bg-white p-3 md:p-4 rounded-lg mb-3 md:mb-4 mx-auto max-w-xs hover:shadow-md transition-shadow">
                       <Image
                         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/yahoo%E8%B3%BC%E5%85%A5%E3%83%9C%E3%82%BF%E3%83%B3-01-o2By6df7JqQxsMmDbxQkB96j4xvzo7.png"
                         alt="Yahoo!で購入"
@@ -666,13 +673,15 @@ export default function ChashuLandingPage() {
                       />
                     </div>
                   </a>
-                  <h4 className="font-bold mb-2 text-gray-900">Yahoo!ショッピング</h4>
-                  <p className="text-sm text-gray-600 mb-4">PayPayポイントが貯まる使えるショッピングモールはこちら</p>
+                  <h4 className="font-bold mb-2 text-gray-900 text-sm md:text-base">Yahoo!ショッピング</h4>
+                  <p className="text-xs md:text-sm text-gray-600 mb-4">
+                    PayPayポイントが貯まる使えるショッピングモールはこちら
+                  </p>
                 </div>
               </div>
 
               {/* Rakuten */}
-              <div className="bg-blue-100 p-6 rounded-lg border border-blue-200">
+              <div className="bg-blue-100 p-4 md:p-6 rounded-lg border border-blue-200">
                 <div className="text-center">
                   <a
                     href="https://item.rakuten.co.jp/aizubrandhall/c/0000000024/"
@@ -680,7 +689,7 @@ export default function ChashuLandingPage() {
                     rel="noopener noreferrer"
                     className="block"
                   >
-                    <div className="bg-white p-4 rounded-lg mb-4 mx-auto max-w-xs hover:shadow-md transition-shadow">
+                    <div className="bg-white p-3 md:p-4 rounded-lg mb-3 md:mb-4 mx-auto max-w-xs hover:shadow-md transition-shadow">
                       <Image
                         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E8%B3%BC%E5%85%A5%E3%83%9C%E3%82%BF%E3%83%B3-01-T1kz4cuzdoGCnAcHvSwGBuBQsfKTIJ.png"
                         alt="楽天で購入"
@@ -690,15 +699,15 @@ export default function ChashuLandingPage() {
                       />
                     </div>
                   </a>
-                  <h4 className="font-bold mb-2 text-gray-900">楽天市場</h4>
-                  <p className="text-sm text-gray-600 mb-4">
+                  <h4 className="font-bold mb-2 text-gray-900 text-sm md:text-base">楽天市場</h4>
+                  <p className="text-xs md:text-sm text-gray-600 mb-4">
                     楽天ポイントが使える国内最大級のショッピングモールはこちら
                   </p>
                 </div>
               </div>
 
               {/* Amazon */}
-              <div className="bg-green-100 p-6 rounded-lg border border-green-200">
+              <div className="bg-green-100 p-4 md:p-6 rounded-lg border border-green-200">
                 <div className="text-center">
                   <a
                     href="https://www.amazon.co.jp/stores/page/485187F9-700A-4C89-85F3-3E4A7A7414EF"
@@ -706,7 +715,7 @@ export default function ChashuLandingPage() {
                     rel="noopener noreferrer"
                     className="block"
                   >
-                    <div className="bg-white p-4 rounded-lg mb-4 mx-auto max-w-xs hover:shadow-md transition-shadow">
+                    <div className="bg-white p-3 md:p-4 rounded-lg mb-3 md:mb-4 mx-auto max-w-xs hover:shadow-md transition-shadow">
                       <Image
                         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Amazon%E8%B3%BC%E5%85%A5%E3%83%9C%E3%82%BF%E3%83%B3-01-XpiFG2txGHCy5bDQenrvFikQe3Alx7.png"
                         alt="Amazonで購入"
@@ -716,17 +725,21 @@ export default function ChashuLandingPage() {
                       />
                     </div>
                   </a>
-                  <h4 className="font-bold mb-2 text-gray-900">Amazon</h4>
-                  <p className="text-sm text-gray-600 mb-4">世界最大のショッピングモールでのお買い物はこちら</p>
+                  <h4 className="font-bold mb-2 text-gray-900 text-sm md:text-base">Amazon</h4>
+                  <p className="text-xs md:text-sm text-gray-600 mb-4">
+                    世界最大のショッピングモールでのお買い物はこちら
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Retort Chashu Purchase Section */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-center mb-8 text-yellow-600">レトルトチャーシュー</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="mb-12 md:mb-16">
+            <h3 className="text-2xl md:text-2xl font-bold text-center mb-6 md:mb-8 text-yellow-600">
+              レトルトチャーシュー
+            </h3>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
               {/* Yahoo Shopping */}
               <div className="bg-pink-100 p-4 md:p-6 rounded-lg border border-pink-200">
                 <div className="text-center">
