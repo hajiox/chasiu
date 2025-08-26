@@ -854,10 +854,6 @@ export default function ChashuLandingPage() {
                 className="absolute inset-0"
               />
             </div>
-            <p className="text-center text-gray-600 mt-4">
-              福島県会津若松市の中心部に位置し、会津の伝統と文化を大切にしながら、
-              全国のお客様に美味しい食材をお届けしています。
-            </p>
           </div>
         </div>
       </section>
