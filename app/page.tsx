@@ -83,7 +83,7 @@ export default function ChashuLandingPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative h-screen">
+      <section className="relative h-[50vh] md:h-[60vh] lg:h-[70vh]">
         <div className="relative w-full h-full">
           <Image
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB_%E3%82%A2%E3%83%BC%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%201.jpg-rzara89L8Xu6Xm6KAId60sFQZBZf5X.jpeg"
@@ -96,17 +96,17 @@ export default function ChashuLandingPage() {
       </section>
 
       {/* Main Copy Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 text-center">
-          <Badge className="mb-4 text-lg bg-amber-600 text-white hover:bg-amber-700">
+      <section className="py-8 md:py-16 bg-gray-50">
+        <div className="container mx-auto px-4 md:px-6 text-center">
+          <Badge className="mb-4 text-sm md:text-lg bg-amber-600 text-white hover:bg-amber-700">
             ラーメン屋が作る本物のチャーシュー
           </Badge>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900">
+          <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold mb-4 md:mb-6 text-gray-900 leading-tight">
             累計10万セット販売突破！
             <br />
             ご家庭で"ラーメン店の味"を再現。
           </h1>
-          <div className="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed space-y-4">
+          <div className="max-w-4xl mx-auto text-sm md:text-lg text-gray-700 leading-relaxed space-y-3 md:space-y-4">
             <p>
               ラーメンを自宅で作るとき、一番手に入りにくい具材は「チャーシュー」です。スーパーでも見かけますが、多くは加工肉のような食感で、本格的な味わいとは異なります。
             </p>
@@ -117,7 +117,7 @@ export default function ChashuLandingPage() {
               そこで当店では、長年チャーシューを作り続けてきた職人が、ラーメン屋と同じ製法で仕込んだ「ラーメン屋が作る本物のチャーシュー」を開発。
             </p>
             <p>これまでに累計10万セットを販売し、多くのお客様にご好評いただいています。</p>
-            <p className="font-bold text-xl text-amber-600">
+            <p className="font-bold text-lg md:text-xl text-amber-600">
               ぜひこの機会に、ラーメン店さながらの本格チャーシューをご家庭でご堪能ください。送料は無料です。
             </p>
           </div>
@@ -125,14 +125,14 @@ export default function ChashuLandingPage() {
       </section>
 
       {/* Trust Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
+      <section className="py-8 md:py-16 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 md:mb-8 text-gray-900">
             いつもありがとうございます。沢山のお客様にご好評頂いています。
           </h2>
 
           {/* Top Row - Awards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-6 md:mb-8 max-w-2xl mx-auto">
             <div className="relative aspect-[3/2] overflow-hidden">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E6%9C%80%E5%84%AA%E7%A7%80%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97-7ciInXAAMeVCnQqeKPvsmC5vEPE5hB.png"
@@ -152,7 +152,7 @@ export default function ChashuLandingPage() {
           </div>
 
           {/* Bottom Row - Rankings */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-4 max-w-4xl mx-auto">
             <div className="relative aspect-square overflow-hidden">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E8%A8%B3%E3%81%82%E3%82%8A1%E4%BD%8D.jpg-Q4MBoGGB3qx9rdHkoAOkfhoYFBg9XW.jpeg"
@@ -188,10 +188,10 @@ export default function ChashuLandingPage() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+          <div className="flex flex-col gap-3 md:gap-4 justify-center mt-8 md:mt-12 px-4">
             <Button
               size="lg"
-              className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 text-lg"
+              className="bg-amber-600 hover:bg-amber-700 text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg w-full md:w-auto"
               onClick={() => scrollToSection("purchase")}
             >
               商品売場へ行く
@@ -199,7 +199,7 @@ export default function ChashuLandingPage() {
             <Button
               size="lg"
               variant="outline"
-              className="border-amber-600 text-amber-600 hover:bg-amber-50 px-8 py-4 text-lg bg-transparent"
+              className="border-amber-600 text-amber-600 hover:bg-amber-50 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg bg-transparent w-full md:w-auto"
               onClick={() => scrollToSection("features")}
             >
               商品特徴をもっと知る（下記をご覧ください）
@@ -209,11 +209,11 @@ export default function ChashuLandingPage() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">美味しさの魅力</h2>
+      <section id="features" className="py-8 md:py-16 bg-gray-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-gray-900">美味しさの魅力</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
             {/* Feature 1 */}
             <Card className="overflow-hidden bg-white border-gray-200 shadow-md">
               <div className="relative aspect-[4/3]">
@@ -728,7 +728,7 @@ export default function ChashuLandingPage() {
             <h3 className="text-2xl font-bold text-center mb-8 text-yellow-600">レトルトチャーシュー</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {/* Yahoo Shopping */}
-              <div className="bg-pink-100 p-6 rounded-lg border border-pink-200">
+              <div className="bg-pink-100 p-4 md:p-6 rounded-lg border border-pink-200">
                 <div className="text-center">
                   <a
                     href="https://store.shopping.yahoo.co.jp/aizubrandhall/b7e3b0c2a5.html"
@@ -736,7 +736,7 @@ export default function ChashuLandingPage() {
                     rel="noopener noreferrer"
                     className="block"
                   >
-                    <div className="bg-white p-4 rounded-lg mb-4 mx-auto max-w-xs hover:shadow-md transition-shadow">
+                    <div className="bg-white p-3 md:p-4 rounded-lg mb-3 md:mb-4 mx-auto max-w-xs hover:shadow-md transition-shadow">
                       <Image
                         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/yahoo%E8%B3%BC%E5%85%A5%E3%83%9C%E3%82%BF%E3%83%B3-01-o2By6df7JqQxsMmDbxQkB96j4xvzo7.png"
                         alt="Yahoo!で購入"
@@ -746,13 +746,15 @@ export default function ChashuLandingPage() {
                       />
                     </div>
                   </a>
-                  <h4 className="font-bold mb-2 text-gray-900">Yahoo!ショッピング</h4>
-                  <p className="text-sm text-gray-600 mb-4">PayPayポイントが貯まる使えるショッピングモールはこちら</p>
+                  <h4 className="font-bold mb-2 text-gray-900 text-sm md:text-base">Yahoo!ショッピング</h4>
+                  <p className="text-xs md:text-sm text-gray-600 mb-4">
+                    PayPayポイントが貯まる使えるショッピングモールはこちら
+                  </p>
                 </div>
               </div>
 
               {/* Rakuten */}
-              <div className="bg-blue-100 p-6 rounded-lg border border-blue-200">
+              <div className="bg-blue-100 p-4 md:p-6 rounded-lg border border-blue-200">
                 <div className="text-center">
                   <a
                     href="https://item.rakuten.co.jp/aizubrandhall/c/0000000016/"
@@ -760,7 +762,7 @@ export default function ChashuLandingPage() {
                     rel="noopener noreferrer"
                     className="block"
                   >
-                    <div className="bg-white p-4 rounded-lg mb-4 mx-auto max-w-xs hover:shadow-md transition-shadow">
+                    <div className="bg-white p-3 md:p-4 rounded-lg mb-3 md:mb-4 mx-auto max-w-xs hover:shadow-md transition-shadow">
                       <Image
                         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E8%B3%BC%E5%85%A5%E3%83%9C%E3%82%BF%E3%83%B3-01-T1kz4cuzdoGCnAcHvSwGBuBQsfKTIJ.png"
                         alt="楽天で購入"
@@ -770,15 +772,15 @@ export default function ChashuLandingPage() {
                       />
                     </div>
                   </a>
-                  <h4 className="font-bold mb-2 text-gray-900">楽天市場</h4>
-                  <p className="text-sm text-gray-600 mb-4">
+                  <h4 className="font-bold mb-2 text-gray-900 text-sm md:text-base">楽天市場</h4>
+                  <p className="text-xs md:text-sm text-gray-600 mb-4">
                     楽天ポイントが使える国内最大級のショッピングモールはこちら
                   </p>
                 </div>
               </div>
 
               {/* Amazon */}
-              <div className="bg-green-100 p-6 rounded-lg border border-green-200">
+              <div className="bg-green-100 p-4 md:p-6 rounded-lg border border-green-200">
                 <div className="text-center">
                   <a
                     href="https://www.amazon.co.jp/stores/page/222C75F5-2370-44E0-8D9A-B26A33B10DCA"
@@ -786,7 +788,7 @@ export default function ChashuLandingPage() {
                     rel="noopener noreferrer"
                     className="block"
                   >
-                    <div className="bg-white p-4 rounded-lg mb-4 mx-auto max-w-xs hover:shadow-md transition-shadow">
+                    <div className="bg-white p-3 md:p-4 rounded-lg mb-3 md:mb-4 mx-auto max-w-xs hover:shadow-md transition-shadow">
                       <Image
                         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Amazon%E8%B3%BC%E5%85%A5%E3%83%9C%E3%82%BF%E3%83%B3-01-XpiFG2txGHCy5bDQenrvFikQe3Alx7.png"
                         alt="Amazonで購入"
@@ -796,8 +798,10 @@ export default function ChashuLandingPage() {
                       />
                     </div>
                   </a>
-                  <h4 className="font-bold mb-2 text-gray-900">Amazon</h4>
-                  <p className="text-sm text-gray-600 mb-4">世界最大のショッピングモールでのお買い物はこちら</p>
+                  <h4 className="font-bold mb-2 text-gray-900 text-sm md:text-base">Amazon</h4>
+                  <p className="text-xs md:text-sm text-gray-600 mb-4">
+                    世界最大のショッピングモールでのお買い物はこちら
+                  </p>
                 </div>
               </div>
             </div>
