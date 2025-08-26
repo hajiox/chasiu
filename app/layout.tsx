@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import "./globals.css"
+import Script from "next/script"
 
 export const metadata: Metadata = {
   title: "会津ブランド館 極上チャーシュー | 楽天月間優良ショップ受賞の本格派",
@@ -47,6 +48,15 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-QF0C5C17LW" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-QF0C5C17LW');
+          `}
+        </Script>
         <style>{`
 html {
   font-family: ${GeistSans.style.fontFamily};
