@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
-// 追加：ローカル画像を使用
+// ★ ローカル画像（/public）
 import mainChashuImage from "@/public/main-chashu-image.jpg"
 import tareImage from "@/public/tare.jpg"
 import aizuBrandLogo from "@/public/aizu-brand-logo.jpg"
@@ -87,7 +87,7 @@ export default function ChashuLandingPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header Section */}
+      {/* Header */}
       <header className="bg-white shadow-sm border-b border-gray-200">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-center">
@@ -103,10 +103,10 @@ export default function ChashuLandingPage() {
         </div>
       </header>
 
-      {/* Hero Section */}
-      {/* TOP画像：エフェクト無し。PCは元比率のまま横幅100%、SPはh-[46vh]で良い感じにトリミング */}
+      {/* Hero：TOP画像（エフェクト無し） */}
+      {/* PCは元比率維持で横幅100%、SPは h-[46vh] でカバー表示 */}
       <section className="w-full">
-        {/* PC/タブレット（元比率を維持） */}
+        {/* PC/タブレット */}
         <div className="hidden md:block">
           <Image
             src={mainChashuImage}
@@ -116,7 +116,7 @@ export default function ChashuLandingPage() {
             sizes="(min-width: 768px) 100vw"
           />
         </div>
-        {/* スマホ（見栄えのためにカバー） */}
+        {/* スマホ */}
         <div className="relative md:hidden h-[46vh] w-full overflow-hidden">
           <Image
             src={mainChashuImage}
@@ -129,14 +129,15 @@ export default function ChashuLandingPage() {
         </div>
       </section>
 
-      {/* Main Copy Section */}
+      {/* Main Copy */}
       <section className="py-6 md:py-12 lg:py-16 bg-gray-50">
         <div className="container mx-auto px-3 md:px-6 text-center max-w-6xl">
-          <Badge className="mb-3 md:mb-4 text-xs md:text-sm lg:text-base bg-amber-600 text-white hover:bg-amber-700 px-3 py-1">
+          {/* ★ モバイル文字を“少しだけ”拡大 */}
+          <Badge className="mb-3 md:mb-4 text-sm md:text-base lg:text-lg bg-amber-600 text-white hover:bg-amber-700 px-3 py-1">
             ラーメン屋が作る本物のチャーシュー
           </Badge>
           <h1
-            className="text-xl md:text-3xl lg:text-5xl font-bold mb-4 md:mb-6 text-gray-900 leading-tight px-2"
+            className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-gray-900 leading-tight px-2"
             style={{ wordBreak: "keep-all", lineBreak: "strict" }}
           >
             累計10万セット販売突破！
@@ -146,7 +147,7 @@ export default function ChashuLandingPage() {
             再現。
           </h1>
           <div
-            className="max-w-4xl mx-auto text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed space-y-3 md:space-y-4 px-2"
+            className="max-w-4xl mx-auto text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed space-y-3 md:space-y-4 px-2"
             style={{ wordBreak: "keep-all", lineBreak: "strict", overflowWrap: "break-word" }}
           >
             <p>
@@ -166,11 +167,11 @@ export default function ChashuLandingPage() {
         </div>
       </section>
 
-      {/* Trust Section */}
+      {/* Thanks / Awards */}
       <section className="py-6 md:py-12 lg:py-16 bg-white">
         <div className="container mx-auto px-3 md:px-6 max-w-6xl">
           <h2
-            className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6 lg:mb-8 text-gray-900 px-2"
+            className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4 md:mb-6 lg:mb-8 text-gray-900 px-2"
             style={{ wordBreak: "keep-all", lineBreak: "strict" }}
           >
             いつもありがとうございます。
@@ -182,8 +183,8 @@ export default function ChashuLandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 mb-4 md:mb-6 lg:mb-8 max-w-2xl mx-auto px-2">
             <div className="relative aspect-[3/2] overflow-hidden rounded-lg">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E6%9C%80%E5%84%AA%E7%A7%80%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97-7ciInXAAMeVCnQqeKPvsmC5vEPE5hB.png"
-                alt="楽天最優秀ショップ"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E6%9C%88%E9%96%93%E5%84%AA%E8%89%AF%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97.png-v2-7ciInXAAMeVCnQqeKPvsmC5vEPE5hB"
+                alt="楽天月間優良ショップ"
                 fill
                 className="object-contain"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -191,7 +192,7 @@ export default function ChashuLandingPage() {
             </div>
             <div className="relative aspect-[3/2] overflow-hidden rounded-lg">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%E3%82%A2%E3%83%AF%E3%83%BC%E3%83%89%E5%8F%97%E8%B3%9E-3J0xWkBa9HwzquDCJPtI0MDA9yc2Wl.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%E3%82%A2%E3%83%AF%E3%83%BC%E3%83%89.png-v2-3J0xWkBa9HwzquDCJPtI0MDA9yc2Wl"
                 alt="メルカリアワード"
                 fill
                 className="object-contain"
@@ -256,7 +257,7 @@ export default function ChashuLandingPage() {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Features */}
       <section id="features" className="py-8 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-gray-900">美味しさの魅力</h2>
@@ -274,10 +275,7 @@ export default function ChashuLandingPage() {
               </div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">① 低温長時間調理 × 炭酸の力</h3>
-                <p
-                  className="text-gray-700 leading-relaxed"
-                  style={{ wordBreak: "keep-all", lineBreak: "strict", overflowWrap: "break-word" }}
-                >
+                <p className="text-gray-700 leading-relaxed">
                   丁寧に低温で時間をかけて煮込むことで、豚肉の旨味を逃さず閉じ込めます。さらに炭酸を加えることで豚特有の臭みを取り除き、肉をしっとり柔らかく仕上げました。ご家庭ではなかなか再現できない、プロの工夫です。
                 </p>
               </CardContent>
@@ -294,11 +292,8 @@ export default function ChashuLandingPage() {
                 />
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-3 text-gray-900">② 秘伝の"育てるタレ"</h3>
-                <p
-                  className="text-gray-700 leading-relaxed"
-                  style={{ wordBreak: "keep-all", lineBreak: "strict", overflowWrap: "break-word" }}
-                >
+                <h3 className="text-xl font-bold mb-3 text-gray-900">② 秘伝の\"育てるタレ\"</h3>
+                <p className="text-gray-700 leading-relaxed">
                   当店のチャーシューは、継ぎ足しで旨味を重ねた特製ダレに一晩漬け込んでいます。肉汁や旨味が溶け込んだ濃厚なタレは、ゼラチン状になるほど濃密。熱々の状態で漬け込むことで、肉の奥深くまでしっかり味が染み込みます。
                 </p>
               </CardContent>
@@ -316,11 +311,8 @@ export default function ChashuLandingPage() {
               </div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">③ 熟練職人の手仕事</h3>
-                <p
-                  className="text-gray-700 leading-relaxed"
-                  style={{ wordBreak: "keep-all", lineBreak: "strict", overflowWrap: "break-word" }}
-                >
-                  大量生産ではなく、職人が一つひとつ丁寧に仕込み。部位ごとの特性を見極め、余計な処理をせずに"豚肉そのものの美味しさ"を最大限に引き出しています。手間を惜しまないからこそ生まれる、専門店ならではの味わいです。
+                <p className="text-gray-700 leading-relaxed">
+                  大量生産ではなく、職人が一つひとつ丁寧に仕込み。部位ごとの特性を見極め、余計な処理をせずに“豚肉そのものの美味しさ”を最大限に引き出しています。手間を惜しまないからこそ生まれる、専門店ならではの味わいです。
                 </p>
               </CardContent>
             </Card>
@@ -328,7 +320,7 @@ export default function ChashuLandingPage() {
         </div>
       </section>
 
-      {/* Ingredients Section */}
+      {/* Ingredients */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
@@ -376,7 +368,7 @@ export default function ChashuLandingPage() {
                 <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
                   <h3 className="font-bold text-xl mb-3 text-gray-900">日本市場でも高評価</h3>
                   <p className="text-gray-700">
-                    2025年最新データでは、スペイン産豚肉の輸入量が前年比8.69％増。特にラーメン用チャーシューとしての需要が高まり、その豊かな風味と柔らかな食感は日本のラーメン文化とも見事に調和しています。
+                    スペイン産豚肉はラーメン用チャーシューとしての需要が高まり、その豊かな風味と柔らかな食感は日本のラーメン文化とも見事に調和しています。
                   </p>
                 </div>
               </div>
@@ -385,7 +377,7 @@ export default function ChashuLandingPage() {
         </div>
       </section>
 
-      {/* Product Section */}
+      {/* Product */}
       <section id="product" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">商品紹介</h2>
@@ -393,147 +385,77 @@ export default function ChashuLandingPage() {
             商品は大きく分けて <span className="font-bold text-amber-600">2種類</span> です。
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
-            <div className="text-center bg-white p-6 rounded-lg border border-gray-200 shadow-md">
-              <h3 className="text-xl font-bold mb-2 text-gray-900">クオリティ重視の方</h3>
-              <p className="text-lg text-gray-700">「冷凍チャーシュー」がおすすめ</p>
-            </div>
-            <div className="text-center bg-white p-6 rounded-lg border border-gray-200 shadow-md">
-              <h3 className="text-xl font-bold mb-2 text-gray-900">コスパ重視の方</h3>
-              <p className="text-lg text-gray-700">「レトルトチャーシュー」がおすすめ</p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-6xl mx-auto">
+            <Card className="overflow-hidden bg-white border-gray-200 shadow-md">
+              <div className="relative aspect-square">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E5%86%B7%E5%87%8D%EF%BC%88%E3%82%AB%E3%83%83%E3%83%88%E6%B8%88%E3%81%BF%EF%BC%89-01.jpg-VHSSzgCFyGvKl17Eoxft2qGAyRHOLj.jpeg"
+                  alt="カット済みチャーシュー800g"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <CardContent className="p-6">
+                <h4 className="text-xl font-bold mb-3 text-gray-900">ラーメン屋が作る本物のチャーシューカット済み800g</h4>
+                <ul className="text-sm text-gray-700 space-y-2 mb-4">
+                  <li>・扱いやすいカット済み＆小分け包装で、必要な分だけ解凍してすぐ使える便利さ。</li>
+                  <li>・ラーメンのトッピングはもちろん、チャーハンや丼物にも相性抜群。</li>
+                  <li>・「普段の食卓をワンランクアップ」させる万能チャーシュー。</li>
+                </ul>
+                <p className="text-2xl font-bold text-amber-600">4,290円（税・送料込）</p>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden bg-white border-gray-200 shadow-md">
+              <div className="relative aspect-square">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E5%86%B7%E5%87%8D%EF%BC%88%E8%A8%B3%E3%82%A2%E3%83%AA%EF%BC%89-01.jpg-5NHQ04cVrUlWIXjCiJrvxFq2welhBq.jpeg"
+                  alt="訳ありチャーシュー1kg"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <CardContent className="p-6">
+                <h4 className="text-xl font-bold mb-3 text-gray-900">ラーメン屋が作る本物のチャーシュー訳あり1kg</h4>
+                <ul className="text-sm text-gray-700 space-y-2 mb-4">
+                  <li>・形が不揃いなだけで、味・品質は正規品と同じ。</li>
+                  <li>・200gの小分けパックで保存も調理もラク。</li>
+                  <li>・とにかく量を楽しみたい方におすすめ。</li>
+                </ul>
+                <p className="text-2xl font-bold text-amber-600">4,290円（税・送料込）</p>
+              </CardContent>
+            </Card>
           </div>
 
-          {/* Frozen Products */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-center mb-8 text-blue-600">冷凍チャーシュー</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              <Card className="overflow-hidden bg-white border-gray-200 shadow-md">
-                <div className="relative aspect-square">
-                  <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E5%86%B7%E5%87%8D%EF%BC%88%E3%82%AB%E3%83%83%E3%83%88%E6%B8%88%E3%81%BF%EF%BC%89-01.jpg-VHSSzgCFyGvKl17Eoxft2qGAyRHOLj.jpeg"
-                    alt="カット済みチャーシュー800g"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <CardContent className="p-6">
-                  <h4 className="text-xl font-bold mb-3 text-gray-900">
-                    ラーメン屋が作る本物のチャーシューカット済み800g
-                  </h4>
-                  <ul className="text-sm text-gray-700 space-y-2 mb-4">
-                    <li>・扱いやすいカット済み＆小分け包装で、必要な分だけ解凍してすぐ使える便利さ。</li>
-                    <li>・ラーメンのトッピングはもちろん、チャーハンや丼物にも相性抜群。</li>
-                    <li>・「普段の食卓をワンランクアップ」させる万能チャーシュー。</li>
-                  </ul>
-                  <p className="text-2xl font-bold text-amber-600">4,290円（税・送料込）</p>
-                </CardContent>
-              </Card>
-
-              <Card className="overflow-hidden bg-white border-gray-200 shadow-md">
-                <div className="relative aspect-square">
-                  <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E5%86%B7%E5%87%8D%EF%BC%88%E8%A8%B3%E3%82%A2%E3%83%AA%EF%BC%89-01.jpg-5NHQ04cVrUlWIXjCiJrvxFq2welhBq.jpeg"
-                    alt="訳ありチャーシュー1kg"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <CardContent className="p-6">
-                  <h4 className="text-xl font-bold mb-3 text-gray-900">ラーメン屋が作る本物のチャーシュー訳あり1kg</h4>
-                  <ul className="text-sm text-gray-700 space-y-2 mb-4">
-                    <li>・形が不揃いなだけで、味・品質は正規品と同じ。</li>
-                    <li>・200gの小分けパックで保存も調理もラク。</li>
-                    <li>・とにかく量を楽しみたい方におすすめ。</li>
-                  </ul>
-                  <p className="text-2xl font-bold text-amber-600">4,290円（税・送料込）</p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-
-          {/* Retort Products */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-center mb-8 text-yellow-600">レトルトチャーシュー</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              <Card className="overflow-hidden bg-white border-gray-200 shadow-md">
-                <div className="relative aspect-square">
-                  <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%AC%E3%83%88%E3%83%AB%E3%83%88%E6%A5%B5%E5%8E%9A8%E6%9E%9A.jpg-h0N5IQqZqSkxoGvMmJDcn5Nz8PIHCu.jpeg"
-                    alt="極厚カットチャーシュー650g"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <CardContent className="p-6">
-                  <h4 className="text-xl font-bold mb-3 text-gray-900">レトルトチャーシュー極厚カット650g（8枚）</h4>
-                  <ul className="text-sm text-gray-700 space-y-2 mb-4">
-                    <li>・厚切りで豪快、まさに「ラーメン二郎」を思わせる存在感。</li>
-                    <li>・自宅で二郎系を楽しみたい方にピッタリのガッツリ系商品。</li>
-                    <li>・常温保存可能で、まとめ買い＆ストックにも便利。</li>
-                  </ul>
-                  <p className="text-2xl font-bold text-amber-600">2,800円（税・送料込）</p>
-                </CardContent>
-              </Card>
-
-              <Card className="overflow-hidden bg-white border-gray-200 shadow-md">
-                <div className="relative aspect-square">
-                  <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%AC%E3%83%88%E3%83%AB%E3%83%88%E4%B8%AD%E5%8E%9A%E3%83%90%E3%83%A9%20.jpg-LfoAGYnPigDuuiYvLo232XvCSROqge.jpeg"
-                    alt="中厚切りチャーシュー400g"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <CardContent className="p-6">
-                  <h4 className="text-xl font-bold mb-3 text-gray-900">
-                    レトルトチャーシュー中厚切り400g（11枚-18枚）
-                  </h4>
-                  <ul className="text-sm text-gray-700 space-y-2 mb-4">
-                    <li>・肩肉を中厚スライスにした食べやすいタイプ。</li>
-                    <li>・インスタントラーメンやカップ麺に一枚のせるだけで、驚くほどリッチな一杯に。</li>
-                    <li>・おつまみやおかずの一品としても気軽に使える"日常＋ちょっと贅沢"アイテム。</li>
-                  </ul>
-                  <p className="text-2xl font-bold text-amber-600">2,300円（税・送料込）</p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-
-          {/* Related Product */}
-          <div>
-            <h3 className="text-2xl font-bold text-center mb-8 text-gray-900">関連商品</h3>
-            <div className="max-w-md mx-auto">
-              <Card className="overflow-hidden bg-white border-gray-200 shadow-md">
-                <div className="relative aspect-square">
-                  {/* 差し替え：ローカルのタレ画像 */}
-                  <Image src={tareImage} alt="チャーシュー専用だれ" fill className="object-cover" sizes="(max-width: 768px) 100vw, 400px" />
-                </div>
-                <CardContent className="p-6">
-                  <h4 className="text-xl font-bold mb-3 text-gray-900">
-                    ラーメン屋が作る本物のチャーシュー専用だれ（80cc × 3個セット）
-                  </h4>
-                  <ul className="text-sm text-gray-700 space-y-2 mb-4">
-                    <li>・清酒・本みりんを使用し、雑味のない奥深い旨味を実現。</li>
-                    <li>・会津ブランド館のチャーシューに最適な和風仕立て。</li>
-                    <li>・そのままかけても、漬けて焼いても美味しく召し上がれます。</li>
-                    <li>・常温保存が可能で、賞味期限は製造より3ヶ月。</li>
-                  </ul>
-                  <p className="text-2xl font-bold text-amber-600">1,500円（税・送料込）</p>
-                </CardContent>
-              </Card>
-            </div>
+          {/* Related Product：★ ローカルのタレ画像使用 */}
+          <div className="max-w-md mx-auto">
+            <Card className="overflow-hidden bg-white border-gray-200 shadow-md">
+              <div className="relative aspect-square">
+                <Image src={tareImage} alt="チャーシュー専用だれ" fill className="object-cover" />
+              </div>
+              <CardContent className="p-6">
+                <h4 className="text-xl font-bold mb-3 text-gray-900">
+                  ラーメン屋が作る本物のチャーシュー専用だれ（80cc × 3個セット）
+                </h4>
+                <ul className="text-sm text-gray-700 space-y-2 mb-4">
+                  <li>・清酒・本みりんを使用し、雑味のない奥深い旨味を実現。</li>
+                  <li>・会津ブランド館のチャーシューに最適な和風仕立て。</li>
+                  <li>・そのままかけても、漬けて焼いても美味しく召し上がれます。</li>
+                  <li>・常温保存が可能で、賞味期限は製造より3ヶ月。</li>
+                </ul>
+                <p className="text-2xl font-bold text-amber-600">1,500円（税・送料込）</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
-      {/* Eating Methods Section */}
+      {/* Eating Methods */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">美味しい食べ方</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* チャーシューメン */}
             <div className="text-center">
               <div className="relative aspect-square mb-4 rounded-lg overflow-hidden shadow-md">
                 <Image
@@ -547,7 +469,6 @@ export default function ChashuLandingPage() {
               <p className="text-gray-700 leading-relaxed">チャーシューたっぷりで贅沢なひととき</p>
             </div>
 
-            {/* 炒飯 */}
             <div className="text-center">
               <div className="relative aspect-square mb-4 rounded-lg overflow-hidden shadow-md">
                 <Image
@@ -561,7 +482,6 @@ export default function ChashuLandingPage() {
               <p className="text-gray-700 leading-relaxed">本物のチャーシューで作る炒飯はお店の味です</p>
             </div>
 
-            {/* チャーシュー丼 */}
             <div className="text-center">
               <div className="relative aspect-square mb-4 rounded-lg overflow-hidden shadow-md">
                 <Image
@@ -578,7 +498,7 @@ export default function ChashuLandingPage() {
         </div>
       </section>
 
-      {/* Reviews Section */}
+      {/* Reviews */}
       <section id="reviews" className="py-8 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-4 text-gray-900">お客様の声</h2>
@@ -626,7 +546,7 @@ export default function ChashuLandingPage() {
         </div>
       </section>
 
-      {/* Shipping Section */}
+      {/* Shipping & Speed */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
@@ -650,7 +570,7 @@ export default function ChashuLandingPage() {
         </div>
       </section>
 
-      {/* Emotional Section */}
+      {/* Emotional */}
       <section className="py-16 bg-white text-gray-900">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -663,11 +583,8 @@ export default function ChashuLandingPage() {
                   className="object-cover"
                 />
               </div>
-              <p
-                className="text-lg leading-relaxed text-gray-700"
-                style={{ wordBreak: "keep-all", lineBreak: "strict", overflowWrap: "break-word" }}
-              >
-                スーパーでは手に入らない"本物"を、自分の部屋でゆっくり味わう。至高の一杯がここにあります。
+              <p className="text-lg leading-relaxed text-gray-700">
+                スーパーでは手に入らない“本物”を、自分の部屋でゆっくり味わう。至高の一杯がここにあります。
               </p>
             </div>
 
@@ -680,10 +597,7 @@ export default function ChashuLandingPage() {
                   className="object-cover"
                 />
               </div>
-              <p
-                className="text-lg leading-relaxed text-gray-700"
-                style={{ wordBreak: "keep-all", lineBreak: "strict", overflowWrap: "break-word" }}
-              >
+              <p className="text-lg leading-relaxed text-gray-700">
                 家族みんなで分け合える本物チャーシュー。食卓に団らんと絆を生む、特別な一皿です。
               </p>
             </div>
@@ -697,10 +611,7 @@ export default function ChashuLandingPage() {
                   className="object-cover"
                 />
               </div>
-              <p
-                className="text-lg leading-relaxed text-gray-700"
-                style={{ wordBreak: "keep-all", lineBreak: "strict", overflowWrap: "break-word" }}
-              >
+              <p className="text-lg leading-relaxed text-gray-700">
                 外食を減らしても贅沢はできる。物価高の今こそ、家で本格ラーメンを。頑張る自分へのご褒美に。
               </p>
             </div>
@@ -708,16 +619,15 @@ export default function ChashuLandingPage() {
         </div>
       </section>
 
-      {/* Purchase Section */}
+      {/* Purchase */}
       <section id="purchase" className="py-8 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-gray-900">ご購入はこちらから</h2>
 
-          {/* Frozen Chashu Purchase Section */}
+          {/* Frozen */}
           <div className="mb-12 md:mb-16">
-            <h3 className="text-2xl md:text-2xl font-bold text-center mb-6 md:mb-8 text-blue-600">冷凍チャーシュー</h3>
+            <h3 className="text-2xl font-bold text-center mb-6 md:mb-8 text-blue-600">冷凍チャーシュー</h3>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
-              {/* Yahoo Shopping */}
               <div className="bg-pink-100 p-4 md:p-6 rounded-lg border border-pink-200">
                 <div className="text-center">
                   <a
@@ -743,7 +653,6 @@ export default function ChashuLandingPage() {
                 </div>
               </div>
 
-              {/* Rakuten */}
               <div className="bg-blue-100 p-4 md:p-6 rounded-lg border border-blue-200">
                 <div className="text-center">
                   <a
@@ -769,7 +678,6 @@ export default function ChashuLandingPage() {
                 </div>
               </div>
 
-              {/* Amazon */}
               <div className="bg-green-100 p-4 md:p-6 rounded-lg border border-green-200">
                 <div className="text-center">
                   <a
@@ -789,21 +697,16 @@ export default function ChashuLandingPage() {
                     </div>
                   </a>
                   <h4 className="font-bold mb-2 text-gray-900 text-sm md:text-base">Amazon</h4>
-                  <p className="text-xs md:text-sm text-gray-600 mb-4">
-                    世界最大のショッピングモールでのお買い物はこちら
-                  </p>
+                  <p className="text-xs md:text-sm text-gray-600 mb-4">世界最大のショッピングモールでのお買い物はこちら</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Retort Chashu Purchase Section */}
+          {/* Retort */}
           <div className="mb-12 md:mb-16">
-            <h3 className="text-2xl md:text-2xl font-bold text-center mb-6 md:mb-8 text-yellow-600">
-              レトルトチャーシュー
-            </h3>
+            <h3 className="text-2xl font-bold text-center mb-6 md:mb-8 text-yellow-600">レトルトチャーシュー</h3>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
-              {/* Yahoo Shopping */}
               <div className="bg-pink-100 p-4 md:p-6 rounded-lg border border-pink-200">
                 <div className="text-center">
                   <a
@@ -829,7 +732,6 @@ export default function ChashuLandingPage() {
                 </div>
               </div>
 
-              {/* Rakuten */}
               <div className="bg-blue-100 p-4 md:p-6 rounded-lg border border-blue-200">
                 <div className="text-center">
                   <a
@@ -855,7 +757,6 @@ export default function ChashuLandingPage() {
                 </div>
               </div>
 
-              {/* Amazon */}
               <div className="bg-green-100 p-4 md:p-6 rounded-lg border border-green-200">
                 <div className="text-center">
                   <a
@@ -875,9 +776,7 @@ export default function ChashuLandingPage() {
                     </div>
                   </a>
                   <h4 className="font-bold mb-2 text-gray-900 text-sm md:text-base">Amazon</h4>
-                  <p className="text-xs md:text-sm text-gray-600 mb-4">
-                    世界最大のショッピングモールでのお買い物はこちら
-                  </p>
+                  <p className="text-xs md:text-sm text-gray-600 mb-4">世界最大のショッピングモールでのお買い物はこちら</p>
                 </div>
               </div>
             </div>
@@ -891,7 +790,6 @@ export default function ChashuLandingPage() {
 
           {/* Store Information */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-8">
-            {/* Store Details */}
             <div>
               <h3 className="text-xl font-bold mb-4 text-gray-900">店舗案内</h3>
               <div className="space-y-2 text-gray-700">
@@ -907,7 +805,6 @@ export default function ChashuLandingPage() {
               </div>
             </div>
 
-            {/* Store Image */}
             <div className="relative aspect-video overflow-hidden shadow-md">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E4%BC%9A%E6%B4%A5%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89%E9%A4%A8%E5%A4%96%E8%A6%B3.jpg-3EilSvcOQOq0DLVyhx9qBG4bUhtIKC.jpeg"
@@ -938,7 +835,7 @@ export default function ChashuLandingPage() {
         </div>
       </section>
 
-      {/* Footer Section */}
+      {/* Footer */}
       <footer className="bg-gray-800 text-white py-8">
         <div className="container mx-auto px-4 text-center">
           <p className="text-sm">© 2025 AIZU BRAND HALL. All rights reserved.</p>
