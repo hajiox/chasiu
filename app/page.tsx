@@ -183,8 +183,8 @@ export default function ChashuLandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 mb-4 md:mb-6 lg:mb-8 max-w-2xl mx-auto px-2">
             <div className="relative aspect-[3/2] overflow-hidden rounded-lg">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E6%9C%88%E9%96%93%E5%84%AA%E8%89%AF%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97.png-v2-7ciInXAAMeVCnQqeKPvsmC5vEPE5hB"
-                alt="楽天月間優良ショップ"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E6%9C%80%E5%84%AA%E7%A7%80%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97-7ciInXAAMeVCnQqeKPvsmC5vEPE5hB.png"
+                alt="楽天最優秀ショップ"
                 fill
                 className="object-contain"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -192,7 +192,7 @@ export default function ChashuLandingPage() {
             </div>
             <div className="relative aspect-[3/2] overflow-hidden rounded-lg">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%E3%82%A2%E3%83%AF%E3%83%BC%E3%83%89.png-v2-3J0xWkBa9HwzquDCJPtI0MDA9yc2Wl"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%E3%82%A2%E3%83%AF%E3%83%BC%E3%83%89%E5%8F%97%E8%B3%9E-3J0xWkBa9HwzquDCJPtI0MDA9yc2Wl.png"
                 alt="メルカリアワード"
                 fill
                 className="object-contain"
