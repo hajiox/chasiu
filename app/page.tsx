@@ -14,6 +14,14 @@ export default function ChashuLandingPage() {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" })
   }
 
+  // Prevent horizontal scrolling on mobile
+  React.useEffect(() => {
+    document.body.style.overflowX = 'hidden'
+    return () => {
+      document.body.style.overflowX = 'auto'
+    }
+  }, [])
+
   const reviews = [
     { comment: "必要な分だけ解凍できるのでとても便利。ラーメンはもちろん、チャーハンや丼物にも使えて重宝しています。味も本格的で家族にも好評でした。", rating: 5, source: "楽天", product: "冷凍カット済み800g" },
     { comment: "カット済みで使いやすく、2枚ずつの個包装がありがたいです。温めずそのままでも美味しく食べられました。リピート決定です。", rating: 5, source: "楽天", product: "冷凍カット済み800g" },
@@ -28,7 +36,7 @@ export default function ChashuLandingPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Header */}
       <header className="bg-white border-b border-gray-200/70">
         <div className="mx-auto max-w-7xl px-3 md:px-6 lg:px-8 py-3 md:py-4">
@@ -79,13 +87,17 @@ export default function ChashuLandingPage() {
             ラーメン屋が作る本物のチャーシュー
           </h1>
 
-          <p className="text-base md:text-2xl text-gray-800 mb-3 md:mb-4">
-            累計10万セット販売の実績！ご家庭で"本物の味"を再現。
-          </p>
+          <h2 className="text-base md:text-2xl text-gray-800 mb-3 md:mb-4">
+            累計10万セット販売の実績！<br className="md:hidden" />
+            ご家庭で"本物の味"を再現。
+          </h2>
 
-          <p className="mx-auto max-w-4xl text-[15px] md:text-lg text-gray-700 leading-relaxed">
-            スーパーでは決して手に入らない職人仕込み。<br className="hidden md:block" />
-            ぜひこの機会に、お店さながらの味わいをご堪能ください。
+          <p className="mx-auto max-w-4xl text-sm md:text-lg text-gray-700 leading-relaxed">
+            スーパーでは決して手に入らない<br className="md:hidden" />
+            職人仕込み。<br className="hidden md:block" />
+            ぜひこの機会に、<br className="md:hidden" />
+            お店さながらの味わいを<br className="md:hidden" />
+            ご堪能ください。
             <span className="font-bold text-amber-600"> 送料は無料です。</span>
           </p>
 
@@ -237,7 +249,7 @@ export default function ChashuLandingPage() {
               <CardContent className="p-5 md:p-6">
                 <h3 className="text-lg md:text-xl font-bold mb-2 text-gray-900">② 秘伝の「育てるタレ」</h3>
                 <p className="text-[15px] md:text-base text-gray-700 leading-relaxed">
-                  継ぎ足し特製だれへ<strong>熱々のまま一晩</strong>。肉汁が溶け込み<strong>ゼラチン化</strong>—まさに<strong>旨味の塊</strong>。
+                  継ぎ足し特製だれへ<strong>熱々のまま一晩</strong>。肉汁が溶け込み<strong>ゼラチン化</strong>―まさに<strong>旨味の塊</strong>。
                 </p>
               </CardContent>
             </Card>
@@ -318,7 +330,7 @@ export default function ChashuLandingPage() {
                 <ul className="text-[15px] md:text-sm text-gray-700 space-y-2 mb-4">
                   <li>・扱いやすいカット済み＆小分け包装で、必要な分だけ解凍してすぐ使える便利さ。</li>
                   <li>・ラーメンのトッピングはもちろん、チャーハンや丼物にも相性抜群。</li>
-                  <li>・「普段の食卓をワンランクアップ」させる万能チャーシュー。</li>
+                  <li>・「普段の食事をワンランクアップ」させる万能チャーシュー。</li>
                 </ul>
                 <p className="text-2xl font-bold text-amber-600">4,290円（税・送料込）</p>
               </CardContent>
@@ -488,9 +500,9 @@ export default function ChashuLandingPage() {
       {/* Emotional */}
       <section className="py-14 md:py-16 bg-white text-gray-900">
         <div className="mx-auto max-w-7xl px-3 md:px-6 lg:px-8">
-          <div className="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <div className="mx-auto max-w-6xl grid grid-cols-3 gap-2 md:gap-8">
             <div className="text-center">
-              <div className="relative aspect-square mb-4 rounded-xl overflow-hidden">
+              <div className="relative aspect-square mb-2 md:mb-4 rounded-lg md:rounded-xl overflow-hidden">
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%9C%AC%E7%89%A9%5B1%5D.jpg-kIUM7GXHcqmgfwz64cGzonnhxJSrzK.jpeg"
                   alt="一人でラーメンを楽しむ"
@@ -498,13 +510,13 @@ export default function ChashuLandingPage() {
                   className="object-cover"
                 />
               </div>
-              <p className="text-[15px] md:text-lg leading-relaxed text-gray-700">
-                スーパーでは手に入らない“本物”を、自分の部屋でゆっくり味わう。至高の一杯がここにあります。
-              </p>
+              <ul className="text-[13px] md:text-lg leading-relaxed text-gray-700 text-left list-disc list-inside">
+                <li>スーパーでは手に入らない"本物"を、自分の部屋でゆっくり味わう。至高の一杯がここにあります。</li>
+              </ul>
             </div>
 
             <div className="text-center">
-              <div className="relative aspect-square mb-4 rounded-xl overflow-hidden">
+              <div className="relative aspect-square mb-2 md:mb-4 rounded-lg md:rounded-xl overflow-hidden">
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E5%9B%A3%E3%82%89%E3%82%93%5B1%5D.jpg-4uArVxvXvQQmSNi3ozVZ0OUsZeBIXm.jpeg"
                   alt="家族でラーメンを楽しむ"
@@ -512,13 +524,13 @@ export default function ChashuLandingPage() {
                   className="object-cover"
                 />
               </div>
-              <p className="text-[15px] md:text-lg leading-relaxed text-gray-700">
-                家族みんなで分け合える本物チャーシュー。食卓に団らんと絆を生む、特別な一皿です。
-              </p>
+              <ul className="text-[13px] md:text-lg leading-relaxed text-gray-700 text-left list-disc list-inside">
+                <li>家族みんなで分け合える本物チャーシュー。食卓に団らんと絆を生む、特別な一皿です。</li>
+              </ul>
             </div>
 
             <div className="text-center">
-              <div className="relative aspect-square mb-4 rounded-xl overflow-hidden">
+              <div className="relative aspect-square mb-2 md:mb-4 rounded-lg md:rounded-xl overflow-hidden">
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%81%94%E8%A4%92%E7%BE%8E%5B1%5D.jpg-oJNJWSEy6EpevcqrREbQd5DB3SjqYT.jpeg"
                   alt="自分へのご褒美ラーメン"
@@ -526,9 +538,9 @@ export default function ChashuLandingPage() {
                   className="object-cover"
                 />
               </div>
-              <p className="text-[15px] md:text-lg leading-relaxed text-gray-700">
-                外食を減らしても贅沢はできる。物価高の今こそ、家で本格ラーメンを。頑張る自分へのご褒美に。
-              </p>
+              <ul className="text-[13px] md:text-lg leading-relaxed text-gray-700 text-left list-disc list-inside">
+                <li>外食を減らしても贅沢はできる。物価高の今こそ、家で本格ラーメンを。頑張る自分へのご褒美に。</li>
+              </ul>
             </div>
           </div>
         </div>
