@@ -6,7 +6,7 @@ import "./globals.css"
 import Script from "next/script"
 
 export const metadata: Metadata = {
-  title: "会津ブランド館 極上チャーシュー | 楽天月間優良ショップ受賞の本格派",
+  title: "会津ブランド館 極上チャーシュー | 累計10万食突破の人気商品を通販で",
   description:
     "楽天市場月間優良ショップ受賞！会津の老舗が作る極上チャーシュー。冷凍・レトルト2種類をご用意。職人の技が光る本格的な味をご家庭で。全国配送対応。",
   metadataBase: new URL("https://chasieu.aizu-syokubura.com"),
