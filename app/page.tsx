@@ -56,8 +56,8 @@ export default function ChashuLandingPage() {
             sizes="(min-width: 768px) 100vw"
           />
         </div>
-        {/* Mobile：高さを少し抑えて主要情報が1画面に収まるように */}
-        <div className="relative md:hidden h-[42vh] w-full overflow-hidden">
+        {/* Mobile */}
+        <div className="relative md:hidden h:[42vh] h-[42vh] w-full overflow-hidden">
           <Image
             src={mainChashuImage}
             alt="ラーメン屋が作る本物のチャーシュー"
@@ -263,54 +263,35 @@ export default function ChashuLandingPage() {
         </div>
       </section>
 
-      {/* Ingredients */}
+      {/* Ingredients (Simplified Spain Pork Section) */}
       <section className="py-14 md:py-16 bg-white">
         <div className="mx-auto max-w-7xl px-3 md:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8 md:mb-12 text-gray-900">
-            世界が認める極上素材：スペイン産豚バラ肉
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-8 text-gray-900">
+            EU最高基準で育った安心のスペイン産豚
           </h2>
 
-          <div className="mx-auto max-w-6xl">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8">
-              <div className="relative aspect-[3/2] rounded-xl overflow-hidden shadow-sm">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E8%B1%9A%E8%88%8E%E3%81%A8%E7%94%9F%E7%94%A3%E8%80%85%EF%BC%88%E7%94%9F%E6%88%90%EF%BC%89.jpg-Fpegb4HOwjBMX2CXf2AnbrkgAO09GN.jpeg"
-                  alt="スペイン産豚肉の生産者と農場"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative aspect-[3/2] rounded-xl overflow-hidden shadow-sm">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%B9%E3%83%9A%E3%82%A4%E3%83%B3%E8%82%89%E8%B3%AA_%E3%82%A2%E3%83%BC%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%201.jpg-8odUEeZXMUz5pWNVxDNoBBwCY0KOCj.jpeg"
-                  alt="豚バラ肉の断面"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+          <div className="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 mb-5 md:mb-8">
+            <div className="relative aspect-[3/2] rounded-xl overflow-hidden border border-gray-200">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E8%B1%9A%E8%88%8E%E3%81%A8%E7%94%9F%E7%94%A3%E8%80%85%EF%BC%88%E7%94%9F%E6%88%90%EF%BC%89.jpg-Fpegb4HOwjBMX2CXf2AnbrkgAO09GN.jpeg"
+                alt="スペインの養豚農場と生産者"
+                fill
+                className="object-cover"
+              />
             </div>
-
-            <div className="text-[15px] md:text-lg text-gray-700 leading-relaxed space-y-4 md:space-y-5">
-              <p>当店のチャーシューは、世界的に高品質と評価されるスペイン産豚バラ肉を使用しています。</p>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mt-6 md:mt-8">
-                <div className="bg-gray-50 p-5 md:p-6 rounded-xl border border-gray-200">
-                  <h3 className="font-bold text-lg md:text-xl mb-2 text-gray-900">世界第3位の生産国、欧州第1位の輸出国</h3>
-                  <p>EUの厳格な基準に基づく品質管理のもと育てられ、安全性と信頼性が確立されています。</p>
-                </div>
-
-                <div className="bg-gray-50 p-5 md:p-6 rounded-xl border border-gray-200">
-                  <h3 className="font-bold text-lg md:text-xl mb-2 text-gray-900">絶妙な赤身と脂身のバランス</h3>
-                  <p>ジューシーで旨味のある食感が特徴。脂肪にはオレイン酸が豊富に含まれます。</p>
-                </div>
-
-                <div className="bg-gray-50 p-5 md:p-6 rounded-xl border border-gray-200">
-                  <h3 className="font-bold text-lg md:text-xl mb-2 text-gray-900">日本市場でも高評価</h3>
-                  <p>ラーメン用チャーシューとしての需要が高まり、豊かな風味と柔らかな食感が支持されています。</p>
-                </div>
-              </div>
+            <div className="relative aspect-[3/2] rounded-xl overflow-hidden border border-gray-200">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%B9%E3%83%9A%E3%82%A4%E3%83%B3%E8%82%89%E8%B3%AA_%E3%82%A2%E3%83%BC%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%201.jpg-8odUEeZXMUz5pWNVxDNoBBwCY0KOCj.jpeg"
+                alt="スペイン産豚バラの断面"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
+
+          <p className="mx-auto max-w-3xl text-[15px] md:text-lg text-gray-700 leading-relaxed text-center">
+            赤身は柔らかく、脂は香ばしくすっきり。世界が認める品質と旨味を、ご家庭でも気軽に味わえます。
+          </p>
         </div>
       </section>
 
@@ -439,7 +420,7 @@ export default function ChashuLandingPage() {
       <section id="reviews" className="py-10 md:py-16 bg-gray-50">
         <div className="mx-auto max-w-7xl px-3 md:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-4 md:mb-6 text-gray-900">お客様の声</h2>
-          <p className="text-center text-gray-600 mb-6 md:mb-10 text-sm md:text-base px-2">
+        <p className="text-center text-gray-600 mb-6 md:mb-10 text-sm md:text-base px-2">
             これらは実際のECサイトに投稿されているものを抜粋させて頂きました。ご購入の際のご参考にどうぞ
           </p>
 
