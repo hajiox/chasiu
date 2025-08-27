@@ -6,15 +6,19 @@ import "./globals.css"
 import Script from "next/script"
 
 export const metadata: Metadata = {
+  // ★ SNSシェアの見出しを統一
   title: "会津ブランド館 極上チャーシュー | 累計10万食突破の人気商品を通販で",
   description:
     "楽天市場月間優良ショップ受賞！会津の老舗が作る極上チャーシュー。冷凍・レトルト2種類をご用意。職人の技が光る本格的な味をご家庭で。全国配送対応。",
-  metadataBase: new URL("https://chasieu.aizu-syokubura.com"),
+  // ★ ドメインを統一（typo修正）
+  metadataBase: new URL("https://chasiu.aizu-syokubura.com"),
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "会津ブランド館 極上チャーシュー | 楽天月間優良ショップ受賞",
+    // ★ ここも統一
+    title: "会津ブランド館 極上チャーシュー | 累計10万食突破の人気商品を通販で",
     description:
       "楽天市場月間優良ショップ受賞！会津の老舗が作る極上チャーシュー。冷凍・レトルト2種類をご用意。職人の技が光る本格的な味をご家庭で。",
-    url: "https://chasieu.aizu-syokubra.com",
+    url: "https://chasiu.aizu-syokubura.com/",
     images: [
       {
         url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/OGP_%E3%82%A2%E3%83%BC%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%201.jpg-BMdcg9s5JIa43MvynMs4FFcxtEqr63.jpeg",
@@ -29,7 +33,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "会津ブランド館 極上チャーシュー | 楽天月間優良ショップ受賞",
+    // ★ ここも統一
+    title: "会津ブランド館 極上チャーシュー | 累計10万食突破の人気商品を通販で",
     description: "楽天市場月間優良ショップ受賞！会津の老舗が作る極上チャーシューをご家庭で。",
     images: [
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/OGP_%E3%82%A2%E3%83%BC%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%201.jpg-BMdcg9s5JIa43MvynMs4FFcxtEqr63.jpeg",
@@ -37,14 +42,12 @@ export const metadata: Metadata = {
   },
   keywords:
     "チャーシュー,会津ブランド館,楽天月間優良ショップ,冷凍チャーシュー,レトルトチャーシュー,福島県,会津若松,本格派,職人,ラーメン具材",
-    generator: 'v0.app'
+  generator: "v0.app",
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ja">
       <head>
