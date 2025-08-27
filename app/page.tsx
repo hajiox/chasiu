@@ -82,33 +82,56 @@ export default function ChashuLandingPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Header Section */}
+      <header className="bg-white shadow-sm border-b border-gray-200">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-center">
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%98%E3%83%83%E3%82%BF%E3%83%BC%E7%94%A8%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89%E9%A4%A8%E3%83%AD%E3%82%B4.jpg-ciMUhnsgrxSQlKvO7LflyWckIBx7b3.jpeg"
+              alt="AIZU BRAND HALL"
+              width={120}
+              height={48}
+              className="object-contain"
+              priority
+            />
+          </div>
+        </div>
+      </header>
+
       {/* Hero Section */}
-      <section className="relative h-[50vh] md:h-[60vh] lg:h-[70vh]">
-        <div className="relative w-full h-full">
+      <section className="relative h-[40vh] md:h-[50vh] lg:h-[60vh] w-full">
+        <div className="relative w-full h-full overflow-hidden">
+          {/* Main Image */}
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB_%E3%82%A2%E3%83%BC%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%201.jpg-rzara89L8Xu6Xm6KAId60sFQZBZf5X.jpeg"
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB_%E3%82%A2%E3%83%BC%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%201.jpg-NuZgGbPSuDie1LK9TnuhhEZiHR2fcf.jpeg"
             alt="ラーメン屋が作る本物のチャーシュー"
             fill
-            className="object-cover"
+            className="object-cover object-center"
             priority
+            sizes="100vw"
           />
+          <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         </div>
       </section>
 
       {/* Main Copy Section */}
-      <section className="py-8 md:py-16 bg-gray-50">
-        <div className="container mx-auto px-4 md:px-6 text-center">
-          <Badge className="mb-4 text-sm md:text-lg bg-amber-600 text-white hover:bg-amber-700">
+      <section className="py-6 md:py-12 lg:py-16 bg-gray-50">
+        <div className="container mx-auto px-3 md:px-6 text-center max-w-6xl">
+          <Badge className="mb-3 md:mb-4 text-xs md:text-sm lg:text-base bg-amber-600 text-white hover:bg-amber-700 px-3 py-1">
             ラーメン屋が作る本物のチャーシュー
           </Badge>
           <h1
-            className="text-2xl md:text-4xl lg:text-6xl font-bold mb-4 md:mb-6 text-gray-900 leading-tight"
+            className="text-xl md:text-3xl lg:text-5xl font-bold mb-4 md:mb-6 text-gray-900 leading-tight px-2"
             style={{ wordBreak: "keep-all", lineBreak: "strict" }}
           >
-            累計10万セット販売突破！ご家庭で"ラーメン店の味"を再現。
+            累計10万セット販売突破！
+            <br className="md:hidden" />
+            ご家庭で"ラーメン店の味"を
+            <br className="md:hidden" />
+            再現。
           </h1>
           <div
-            className="max-w-4xl mx-auto text-sm md:text-lg text-gray-700 leading-relaxed space-y-3 md:space-y-4"
+            className="max-w-4xl mx-auto text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed space-y-3 md:space-y-4 px-2"
             style={{ wordBreak: "keep-all", lineBreak: "strict", overflowWrap: "break-word" }}
           >
             <p>
@@ -129,37 +152,41 @@ export default function ChashuLandingPage() {
       </section>
 
       {/* Trust Section */}
-      <section className="py-8 md:py-16 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
+      <section className="py-6 md:py-12 lg:py-16 bg-white">
+        <div className="container mx-auto px-3 md:px-6 max-w-6xl">
           <h2
-            className="text-2xl md:text-3xl font-bold text-center mb-6 md:mb-8 text-gray-900"
+            className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6 lg:mb-8 text-gray-900 px-2"
             style={{ wordBreak: "keep-all", lineBreak: "strict" }}
           >
-            いつもありがとうございます。沢山のお客様にご好評頂いています。
+            いつもありがとうございます。
+            <br className="md:hidden" />
+            沢山のお客様にご好評頂いています。
           </h2>
 
           {/* Top Row - Awards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-6 md:mb-8 max-w-2xl mx-auto">
-            <div className="relative aspect-[3/2] overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 mb-4 md:mb-6 lg:mb-8 max-w-2xl mx-auto px-2">
+            <div className="relative aspect-[3/2] overflow-hidden rounded-lg">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E6%9C%80%E5%84%AA%E7%A7%80%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97-7ciInXAAMeVCnQqeKPvsmC5vEPE5hB.png"
                 alt="楽天最優秀ショップ"
                 fill
                 className="object-contain"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
-            <div className="relative aspect-[3/2] overflow-hidden">
+            <div className="relative aspect-[3/2] overflow-hidden rounded-lg">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%E3%82%A2%E3%83%AF%E3%83%BC%E3%83%89%E5%8F%97%E8%B3%9E-3J0xWkBa9HwzquDCJPtI0MDA9yc2Wl.png"
                 alt="メルカリアワード"
                 fill
                 className="object-contain"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>
 
           {/* Bottom Row - Rankings */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-4 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 max-w-4xl mx-auto px-2 mb-6 md:mb-8">
             <div className="relative aspect-square overflow-hidden">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E8%A8%B3%E3%81%82%E3%82%8A1%E4%BD%8D.jpg-Q4MBoGGB3qx9rdHkoAOkfhoYFBg9XW.jpeg"
@@ -195,17 +222,17 @@ export default function ChashuLandingPage() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col gap-4 justify-center mt-8 md:mt-12 px-4 max-w-md mx-auto">
+          <div className="flex flex-col gap-3 justify-center mt-6 md:mt-8 lg:mt-12 px-4 max-w-sm mx-auto">
             <Button
               size="lg"
-              className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 w-full"
+              className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 text-base md:text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 w-full"
               onClick={() => scrollToSection("purchase")}
             >
               商品売場へ行く
             </Button>
             <Button
               size="lg"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-base font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 w-full"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 text-sm md:text-base font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 w-full"
               onClick={() => scrollToSection("features")}
             >
               商品特徴をもっと知る
@@ -591,7 +618,7 @@ export default function ChashuLandingPage() {
       {/* Shipping Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
             <div className="relative aspect-[3/2] overflow-hidden">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E9%80%81%E6%96%99%E7%84%A1%E6%96%99-01.jpg-TumFDrStQKWbfHPR6ScP7lMSmHViX6.jpeg"
