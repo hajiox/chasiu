@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
-// ★ ローカル画像（/public）
+// ローカル画像（/public）
 import mainChashuImage from "@/public/main-chashu-image.jpg"
 import tareImage from "@/public/tare.jpg"
 import aizuBrandLogo from "@/public/aizu-brand-logo.jpg"
@@ -16,73 +16,16 @@ export default function ChashuLandingPage() {
   }
 
   const reviews = [
-    {
-      comment:
-        "必要な分だけ解凍できるのでとても便利。ラーメンはもちろん、チャーハンや丼物にも使えて重宝しています。味も本格的で家族にも好評でした。",
-      rating: 5,
-      source: "楽天",
-      product: "冷凍カット済み800g",
-    },
-    {
-      comment:
-        "カット済みで使いやすく、2枚ずつの個包装がありがたいです。温めずそのままでも美味しく食べられました。リピート決定です。",
-      rating: 5,
-      source: "楽天",
-      product: "冷凍カット済み800g",
-    },
-    {
-      comment:
-        "思ったより薄切りでしたが、ラーメンのトッピングにはちょうど良い厚さ。お酒のおつまみにも使いやすく、便利な商品だと思います。",
-      rating: 4,
-      source: "楽天",
-      product: "冷凍カット済み800g",
-    },
-    {
-      comment:
-        "見た目は不揃いでも味は抜群。200gずつの小分けなので使いやすく、冷凍庫に常備しています。コスパが良くて助かります。",
-      rating: 5,
-      source: "楽天",
-      product: "冷凍訳あり1kg",
-    },
-    {
-      comment: "子どもが大好きであっという間になくなります。量がしっかりあるので家族みんなで楽しめるのが嬉しいです。",
-      rating: 5,
-      source: "楽天",
-      product: "冷凍訳あり1kg",
-    },
-    {
-      comment: "タレの味が絶妙でご飯が進みます。お弁当のおかずや夜食にもピッタリで、買って正解でした。",
-      rating: 5,
-      source: "楽天",
-      product: "冷凍訳あり1kg",
-    },
-    {
-      comment:
-        "二郎系ラーメンにピッタリ！厚切りで食べ応えがあり、常温保存できるのも便利。個包装で扱いやすいのも良いです。",
-      rating: 5,
-      source: "楽天",
-      product: "レトルト極厚カット650g",
-    },
-    {
-      comment:
-        "少し味が薄めに感じましたが、ラーメンにのせるとバランスが良くなります。家で豪快に楽しめるチャーシューです。",
-      rating: 4,
-      source: "楽天",
-      product: "レトルト極厚カット650g",
-    },
-    {
-      comment:
-        "インスタントラーメンが一気に豪華になります。枚数も多くて使いやすく、非常食としても常備しておきたいです。",
-      rating: 5,
-      source: "楽天",
-      product: "レトルト中厚スライス400g",
-    },
-    {
-      comment: "常温保存できるので保存食に便利。味もしっかりしていて、ご飯のおかずやおつまみにも最適でした。",
-      rating: 5,
-      source: "楽天",
-      product: "レトルト中厚スライス400g",
-    },
+    { comment: "必要な分だけ解凍できるのでとても便利。ラーメンはもちろん、チャーハンや丼物にも使えて重宝しています。味も本格的で家族にも好評でした。", rating: 5, source: "楽天", product: "冷凍カット済み800g" },
+    { comment: "カット済みで使いやすく、2枚ずつの個包装がありがたいです。温めずそのままでも美味しく食べられました。リピート決定です。", rating: 5, source: "楽天", product: "冷凍カット済み800g" },
+    { comment: "思ったより薄切りでしたが、ラーメンのトッピングにはちょうど良い厚さ。お酒のおつまみにも使いやすく、便利な商品だと思います。", rating: 4, source: "楽天", product: "冷凍カット済み800g" },
+    { comment: "見た目は不揃いでも味は抜群。200gずつの小分けなので使いやすく、冷凍庫に常備しています。コスパが良くて助かります。", rating: 5, source: "楽天", product: "冷凍訳あり1kg" },
+    { comment: "子どもが大好きであっという間になくなります。量がしっかりあるので家族みんなで楽しめるのが嬉しいです。", rating: 5, source: "楽天", product: "冷凍訳あり1kg" },
+    { comment: "タレの味が絶妙でご飯が進みます。お弁当のおかずや夜食にもピッタリで、買って正解でした。", rating: 5, source: "楽天", product: "冷凍訳あり1kg" },
+    { comment: "二郎系ラーメンにピッタリ！厚切りで食べ応えがあり、常温保存できるのも便利。個包装で扱いやすいのも良いです。", rating: 5, source: "楽天", product: "レトルト極厚カット650g" },
+    { comment: "少し味が薄めに感じましたが、ラーメンにのせるとバランスが良くなります。家で豪快に楽しめるチャーシューです。", rating: 4, source: "楽天", product: "レトルト極厚カット650g" },
+    { comment: "インスタントラーメンが一気に豪華になります。枚数も多くて使いやすく、非常食としても常備しておきたいです。", rating: 5, source: "楽天", product: "レトルト中厚スライス400g" },
+    { comment: "常温保存できるので保存食に便利。味もしっかりしていて、ご飯のおかずやおつまみにも最適でした。", rating: 5, source: "楽天", product: "レトルト中厚スライス400g" },
   ]
 
   return (
@@ -91,7 +34,6 @@ export default function ChashuLandingPage() {
       <header className="bg-white shadow-sm border-b border-gray-200">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-center">
-            {/* ローカルのブランドロゴを使用 */}
             <Image
               src={aizuBrandLogo}
               alt="AIZU BRAND HALL"
@@ -129,40 +71,46 @@ export default function ChashuLandingPage() {
         </div>
       </section>
 
-      {/* Main Copy */}
-      <section className="py-6 md:py-12 lg:py-16 bg-gray-50">
-        <div className="container mx-auto px-3 md:px-6 text-center max-w-6xl">
-          {/* ★ モバイル文字を“少しだけ”拡大 */}
-          <Badge className="mb-3 md:mb-4 text-sm md:text-base lg:text-lg bg-amber-600 text-white hover:bg-amber-700 px-3 py-1">
-            ラーメン屋が作る本物のチャーシュー
-          </Badge>
+      {/* Main Copy Section（ご指定のコピーに刷新） */}
+      <section className="py-6 md:py-10 bg-gray-50">
+        <div className="container mx-auto px-3 md:px-6 text-center max-w-5xl">
+          {/* メインコピー */}
           <h1
-            className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-gray-900 leading-tight px-2"
+            className="text-3xl md:text-5xl font-extrabold mb-2 md:mb-3 text-gray-900 leading-tight"
             style={{ wordBreak: "keep-all", lineBreak: "strict" }}
           >
-            累計10万セット販売突破！
-            <br className="md:hidden" />
-            ご家庭で"ラーメン店の味"を
-            <br className="md:hidden" />
-            再現。
+            ラーメン屋が作る本物のチャーシュー
           </h1>
-          <div
-            className="max-w-4xl mx-auto text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed space-y-3 md:space-y-4 px-2"
-            style={{ wordBreak: "keep-all", lineBreak: "strict", overflowWrap: "break-word" }}
-          >
-            <p>
-              ラーメンを自宅で作るとき、一番手に入りにくい具材は「チャーシュー」です。スーパーでも見かけますが、多くは加工肉のような食感で、本格的な味わいとは異なります。
-            </p>
-            <p>
-              本物のチャーシューは製造に手間がかかり、機械化も難しいため、大手メーカーの参入が少なく、ラーメン店の味をそのまま家庭で楽しめる商品はほとんどありません。
-            </p>
-            <p>
-              そこで当店では、長年チャーシューを作り続けてきた職人が、ラーメン屋と同じ製法で仕込んだ「ラーメン屋が作る本物のチャーシュー」を開発。
-            </p>
-            <p>これまでに累計10万セットを販売し、多くのお客様にご好評いただいています。</p>
-            <p className="font-bold text-lg md:text-xl text-amber-600">
-              ぜひこの機会に、ラーメン店さながらの本格チャーシューをご家庭でご堪能ください。送料は無料です。
-            </p>
+
+          {/* サブコピー */}
+          <p className="text-base md:text-2xl text-gray-800 mb-3 md:mb-4">
+            累計10万セット販売の実績！ご家庭で"本物の味"を再現。
+          </p>
+
+          {/* 説明文（簡潔に） */}
+          <p className="max-w-4xl mx-auto text-base md:text-lg text-gray-700 leading-relaxed">
+            スーパーでは決して手に入らない職人仕込み。<br className="hidden md:block" />
+            ぜひこの機会に、お店さながらの味わいをご堪能ください。
+            <span className="font-bold text-amber-600"> 送料は無料です。</span>
+          </p>
+
+          {/* CTA */}
+          <div className="flex flex-col sm:flex-row gap-3 justify-center mt-5">
+            <Button
+              size="lg"
+              className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 text-base md:text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all"
+              onClick={() => scrollToSection("purchase")}
+            >
+              今すぐ購入
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="text-gray-900 border-gray-300 hover:bg-gray-100 px-6 py-3 text-sm md:text-base font-semibold rounded-xl transition-all"
+              onClick={() => scrollToSection("features")}
+            >
+              こだわりを見る
+            </Button>
           </div>
         </div>
       </section>
@@ -184,7 +132,7 @@ export default function ChashuLandingPage() {
             <div className="relative aspect-[3/2] overflow-hidden rounded-lg">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E6%9C%80%E5%84%AA%E7%A7%80%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97-7ciInXAAMeVCnQqeKPvsmC5vEPE5hB.png"
-                alt="楽天最優秀ショップ"
+                alt="楽天月間優良ショップ"
                 fill
                 className="object-contain"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -192,7 +140,7 @@ export default function ChashuLandingPage() {
             </div>
             <div className="relative aspect-[3/2] overflow-hidden rounded-lg">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%E3%82%A2%E3%83%AF%E3%83%BC%E3%83%89%E5%8F%97%E8%B3%9E-3J0xWkBa9HwzquDCJPtI0MDA9yc2Wl.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%E3%82%A2%E3%83%AF%E3%83%BC%E3%83%89-3J0xWkBa9HwzquDCJPtI0MDA9yc2Wl.png"
                 alt="メルカリアワード"
                 fill
                 className="object-contain"
@@ -276,7 +224,7 @@ export default function ChashuLandingPage() {
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">① 低温長時間調理 × 炭酸の力</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  丁寧に低温で時間をかけて煮込むことで、豚肉の旨味を逃さず閉じ込めます。さらに炭酸を加えることで豚特有の臭みを取り除き、肉をしっとり柔らかく仕上げました。ご家庭ではなかなか再現できない、プロの工夫です。
+                  丁寧に低温で時間をかけて煮込むことで、豚肉の旨味を逃さず閉じ込めます。さらに炭酸を加えることで豚特有の臭みを取り除き、肉をしっとり柔らかく仕上げました。
                 </p>
               </CardContent>
             </Card>
@@ -292,9 +240,9 @@ export default function ChashuLandingPage() {
                 />
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-3 text-gray-900">② 秘伝の\"育てるタレ\"</h3>
+                <h3 className="text-xl font-bold mb-3 text-gray-900">② 秘伝の"育てるタレ"</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  当店のチャーシューは、継ぎ足しで旨味を重ねた特製ダレに一晩漬け込んでいます。肉汁や旨味が溶け込んだ濃厚なタレは、ゼラチン状になるほど濃密。熱々の状態で漬け込むことで、肉の奥深くまでしっかり味が染み込みます。
+                  継ぎ足しで旨味を重ねた特製ダレに一晩漬け込み、熱々の状態で味を染み込ませることで濃厚なコクを実現。
                 </p>
               </CardContent>
             </Card>
@@ -312,7 +260,7 @@ export default function ChashuLandingPage() {
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">③ 熟練職人の手仕事</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  大量生産ではなく、職人が一つひとつ丁寧に仕込み。部位ごとの特性を見極め、余計な処理をせずに“豚肉そのものの美味しさ”を最大限に引き出しています。手間を惜しまないからこそ生まれる、専門店ならではの味わいです。
+                  大量生産ではなく職人が一つひとつ丁寧に仕込み。"豚肉そのものの美味しさ"を最大限に引き出します。
                 </p>
               </CardContent>
             </Card>
@@ -353,23 +301,17 @@ export default function ChashuLandingPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
                 <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
                   <h3 className="font-bold text-xl mb-3 text-gray-900">世界第3位の生産国、欧州第1位の輸出国</h3>
-                  <p className="text-gray-700">
-                    EUの厳格な基準に基づく品質管理のもと育てられ、安全性と信頼性が確立されています。
-                  </p>
+                  <p className="text-gray-700">EUの厳格な基準に基づく品質管理のもと育てられ、安全性と信頼性が確立されています。</p>
                 </div>
 
                 <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
                   <h3 className="font-bold text-xl mb-3 text-gray-900">絶妙な赤身と脂身のバランス</h3>
-                  <p className="text-gray-700">
-                    ジューシーで旨味のある食感が特徴。脂肪にはオレイン酸が豊富に含まれ、体に優しい脂質としても注目されています。
-                  </p>
+                  <p className="text-gray-700">ジューシーで旨味のある食感が特徴。脂肪にはオレイン酸が豊富に含まれます。</p>
                 </div>
 
                 <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
                   <h3 className="font-bold text-xl mb-3 text-gray-900">日本市場でも高評価</h3>
-                  <p className="text-gray-700">
-                    スペイン産豚肉はラーメン用チャーシューとしての需要が高まり、その豊かな風味と柔らかな食感は日本のラーメン文化とも見事に調和しています。
-                  </p>
+                  <p className="text-gray-700">ラーメン用チャーシューとしての需要が高まり、豊かな風味と柔らかな食感が支持されています。</p>
                 </div>
               </div>
             </div>
@@ -427,7 +369,7 @@ export default function ChashuLandingPage() {
             </Card>
           </div>
 
-          {/* Related Product：★ ローカルのタレ画像使用 */}
+          {/* Related Product：ローカルのタレ画像 */}
           <div className="max-w-md mx-auto">
             <Card className="overflow-hidden bg-white border-gray-200 shadow-md">
               <div className="relative aspect-square">
@@ -526,10 +468,7 @@ export default function ChashuLandingPage() {
                             <span key={index}>★</span>
                           ))}
                         </div>
-                        <Badge
-                          variant="outline"
-                          className="text-xs border-gray-400 text-gray-600 hidden sm:inline-flex"
-                        >
+                        <Badge variant="outline" className="text-xs border-gray-400 text-gray-600 hidden sm:inline-flex">
                           {review.product}を購入されたお客様
                         </Badge>
                         <Badge variant="outline" className="text-xs border-gray-400 text-gray-600 sm:hidden">
@@ -647,9 +586,7 @@ export default function ChashuLandingPage() {
                     </div>
                   </a>
                   <h4 className="font-bold mb-2 text-gray-900 text-sm md:text-base">Yahoo!ショッピング</h4>
-                  <p className="text-xs md:text-sm text-gray-600 mb-4">
-                    PayPayポイントが貯まる使えるショッピングモールはこちら
-                  </p>
+                  <p className="text-xs md:text-sm text-gray-600 mb-4">PayPayポイントが貯まる使えるショッピングモールはこちら</p>
                 </div>
               </div>
 
@@ -672,9 +609,7 @@ export default function ChashuLandingPage() {
                     </div>
                   </a>
                   <h4 className="font-bold mb-2 text-gray-900 text-sm md:text-base">楽天市場</h4>
-                  <p className="text-xs md:text-sm text-gray-600 mb-4">
-                    楽天ポイントが使える国内最大級のショッピングモールはこちら
-                  </p>
+                  <p className="text-xs md:text-sm text-gray-600 mb-4">楽天ポイントが使える国内最大級のショッピングモールはこちら</p>
                 </div>
               </div>
 
@@ -726,9 +661,7 @@ export default function ChashuLandingPage() {
                     </div>
                   </a>
                   <h4 className="font-bold mb-2 text-gray-900 text-sm md:text-base">Yahoo!ショッピング</h4>
-                  <p className="text-xs md:text-sm text-gray-600 mb-4">
-                    PayPayポイントが貯まる使えるショッピングモールはこちら
-                  </p>
+                  <p className="text-xs md:text-sm text-gray-600 mb-4">PayPayポイントが貯まる使えるショッピングモールはこちら</p>
                 </div>
               </div>
 
@@ -751,9 +684,7 @@ export default function ChashuLandingPage() {
                     </div>
                   </a>
                   <h4 className="font-bold mb-2 text-gray-900 text-sm md:text-base">楽天市場</h4>
-                  <p className="text-xs md:text-sm text-gray-600 mb-4">
-                    楽天ポイントが使える国内最大級のショッピングモールはこちら
-                  </p>
+                  <p className="text-xs md:text-sm text-gray-600 mb-4">楽天ポイントが使える国内最大級のショッピングモールはこちら</p>
                 </div>
               </div>
 
@@ -783,9 +714,7 @@ export default function ChashuLandingPage() {
           </div>
 
           <div className="text-center mb-8">
-            <p className="text-lg font-bold text-gray-900 mb-4">
-              この商品は「会津ブランド館」が製造・販売・発送を行っています。
-            </p>
+            <p className="text-lg font-bold text-gray-900 mb-4">この商品は「会津ブランド館」が製造・販売・発送を行っています。</p>
           </div>
 
           {/* Store Information */}
@@ -793,9 +722,7 @@ export default function ChashuLandingPage() {
             <div>
               <h3 className="text-xl font-bold mb-4 text-gray-900">店舗案内</h3>
               <div className="space-y-2 text-gray-700">
-                <p>
-                  <span className="font-semibold">会津ブランド館</span>
-                </p>
+                <p><span className="font-semibold">会津ブランド館</span></p>
                 <p>〒965-0044</p>
                 <p>福島県会津若松市七日町6-15</p>
                 <p>TEL: 0242-25-1441</p>
