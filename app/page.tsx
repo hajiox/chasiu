@@ -4,6 +4,7 @@ import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import mainChashuImage from "@/public/main-chashu-image.jpg"
 
 export default function ChashuLandingPage() {
   const scrollToSection = (sectionId: string) => {
@@ -103,12 +104,13 @@ export default function ChashuLandingPage() {
         <div className="relative w-full h-full overflow-hidden">
           {/* Main Image */}
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB_%E3%82%A2%E3%83%BC%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%201.jpg-NuZgGbPSuDie1LK9TnuhhEZiHR2fcf.jpeg"
+            src={mainChashuImage}
             alt="ラーメン屋が作る本物のチャーシュー"
             fill
             className="object-cover object-center"
             priority
-            sizes="100vw"
+            placeholder="blur"
+            sizes="(max-width: 768px) 100vw, 100vw"
           />
           <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         </div>
