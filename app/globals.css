@@ -122,4 +122,12 @@
   body {
     @apply bg-background text-foreground;
   }
+  html {
+    overscroll-behavior-x: none;
+    touch-action: pan-y;
+  }
+  body {
+    overscroll-behavior-x: none;
+    overflow-x: hidden;
+  }
 }
