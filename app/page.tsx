@@ -26,12 +26,12 @@ export default function ChashuLandingPage() {
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white border-b border-gray-200/70">
-        <div className="mx-auto max-w-7xl px-3 md:px-6 lg:px-8 py-3 md:py-4">
+        <div className="mx-auto max-w-7xl px-3 md:px-6 lg:px-8 py-4 md:py-5">
           <div className="flex items-center justify-center">
             <img
               src="/aizu-brand-logo.jpg"
               alt="AIZU BRAND HALL"
-              className="object-contain h-10 md:h-12 w-auto"
+              className="object-contain h-14 md:h-16 w-auto"
             />
           </div>
         </div>
