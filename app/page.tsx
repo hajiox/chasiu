@@ -1,27 +1,13 @@
 "use client"
 
-import React from "react"
-import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-
-import mainChashuImage from "@/public/main-chashu-image.jpg"
-import tareImage from "@/public/tare.jpg"
-import aizuBrandLogo from "@/public/aizu-brand-logo.jpg"
 
 export default function ChashuLandingPage() {
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" })
   }
-
-  // Prevent horizontal scrolling on mobile
-  React.useEffect(() => {
-    document.body.style.overflowX = 'hidden'
-    return () => {
-      document.body.style.overflowX = 'auto'
-    }
-  }, [])
 
   const reviews = [
     { comment: "必要な分だけ解凍できるのでとても便利。ラーメンはもちろん、チャーハンや丼物にも使えて重宝しています。味も本格的で家族にも好評でした。", rating: 5, source: "楽天", product: "冷凍カット済み800g" },
@@ -37,17 +23,15 @@ export default function ChashuLandingPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-white overflow-x-hidden">
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white border-b border-gray-200/70">
         <div className="mx-auto max-w-7xl px-3 md:px-6 lg:px-8 py-3 md:py-4">
           <div className="flex items-center justify-center">
-            <Image
-              src={aizuBrandLogo}
+            <img
+              src="/aizu-brand-logo.jpg"
               alt="AIZU BRAND HALL"
-              height={48}
               className="object-contain h-10 md:h-12 w-auto"
-              priority
             />
           </div>
         </div>
@@ -57,23 +41,18 @@ export default function ChashuLandingPage() {
       <section className="w-full">
         {/* PC/Tablet */}
         <div className="hidden md:block">
-          <Image
-            src={mainChashuImage}
-            alt="ラーメン屋が作る本物のチャーシュー"
-            priority
+          <img
+            src="/main-chashu-image.jpg"
+            alt="ラーメン屋がつくる本物のチャーシュー"
             className="w-full h-auto"
-            sizes="(min-width: 768px) 100vw"
           />
         </div>
         {/* Mobile */}
-        <div className="relative md:hidden h:[42vh] h-[42vh] w-full overflow-hidden">
-          <Image
-            src={mainChashuImage}
-            alt="ラーメン屋が作る本物のチャーシュー"
-            fill
-            className="object-cover object-center"
-            priority
-            sizes="100vw"
+        <div className="relative md:hidden h-[42vh] w-full overflow-hidden">
+          <img
+            src="/main-chashu-image.jpg"
+            alt="ラーメン屋がつくる本物のチャーシュー"
+            className="absolute inset-0 w-full h-full object-cover object-center"
           />
         </div>
       </section>
@@ -82,23 +61,21 @@ export default function ChashuLandingPage() {
       <section className="py-6 md:py-10 bg-gray-50">
         <div className="mx-auto max-w-7xl px-3 md:px-6 lg:px-8 text-center">
           <h1
-            className="text-2xl md:text-4xl lg:text-5xl font-extrabold mb-2 md:mb-3 text-gray-900 leading-tight"
+            className="text-[26px] md:text-4xl lg:text-5xl font-extrabold mb-3 md:mb-3 text-gray-900 leading-[1.3]"
             style={{ wordBreak: "keep-all", lineBreak: "strict" }}
           >
-            ラーメン屋が作る本物のチャーシュー
+            ラーメン屋がつくる<br className="sm:hidden" />
+            本物のチャーシュー
           </h1>
 
-          <h2 className="text-base md:text-2xl text-gray-800 mb-3 md:mb-4">
-            累計10万セット販売の実績！<br className="md:hidden" />
+          <p className="text-lg md:text-2xl text-gray-800 mb-3 md:mb-4 font-medium">
+            累計10万セット販売の実績！<br className="sm:hidden" />
             ご家庭で"本物の味"を再現。
-          </h2>
+          </p>
 
-          <p className="mx-auto max-w-4xl text-sm md:text-lg text-gray-700 leading-relaxed">
-            スーパーでは決して手に入らない<br className="md:hidden" />
-            職人仕込み。<br className="hidden md:block" />
-            ぜひこの機会に、<br className="md:hidden" />
-            お店さながらの味わいを<br className="md:hidden" />
-            ご堪能ください。
+          <p className="mx-auto max-w-4xl text-base md:text-lg text-gray-700 leading-[1.7]">
+            スーパーでは決して手に入らない<br className="sm:hidden" />職人仕込み。<br className="hidden md:block" />
+            ぜひこの機会に、<br className="sm:hidden" />お店さながらの味わいを<br className="sm:hidden" />ご堪能ください。
             <span className="font-bold text-amber-600"> 送料は無料です。</span>
           </p>
 
@@ -136,21 +113,17 @@ export default function ChashuLandingPage() {
           {/* Top Row - Awards */}
           <div className="mx-auto max-w-3xl grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-6 md:mb-8">
             <div className="relative aspect-[3/2] overflow-hidden rounded-xl border border-gray-200">
-              <Image
+              <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E6%9C%80%E5%84%AA%E7%A7%80%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97-7ciInXAAMeVCnQqeKPvsmC5vEPE5hB.png"
                 alt="楽天月間優良ショップ"
-                fill
-                className="object-contain p-3"
-                sizes="(max-width: 768px) 100vw, 50vw"
+                className="w-full h-full object-contain p-3"
               />
             </div>
             <div className="relative aspect-[3/2] overflow-hidden rounded-xl border border-gray-200">
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%E3%82%A2%E3%83%AF%E3%83%BC%E3%83%89-3J0xWkBa9HwzquDCJPtI0MDA9yc2Wl.png"
+              <img
+                src="/mercari.png"
                 alt="メルカリアワード"
-                fill
-                className="object-contain p-3"
-                sizes="(max-width: 768px) 100vw, 50vw"
+                className="w-full h-full object-contain p-3"
               />
             </div>
           </div>
@@ -158,35 +131,31 @@ export default function ChashuLandingPage() {
           {/* Bottom Row - Rankings */}
           <div className="mx-auto max-w-5xl grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-6 md:mb-10">
             <div className="relative aspect-square overflow-hidden rounded-lg border border-gray-200">
-              <Image
+              <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E8%A8%B3%E3%81%82%E3%82%8A1%E4%BD%8D.jpg-Q4MBoGGB3qx9rdHkoAOkfhoYFBg9XW.jpeg"
                 alt="訳あり1位"
-                fill
-                className="object-contain p-2"
+                className="w-full h-full object-contain p-2"
               />
             </div>
             <div className="relative aspect-square overflow-hidden rounded-lg border border-gray-200">
-              <Image
+              <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E3%83%81%E3%83%A3%E3%83%BC%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%B9%E3%83%A9%E3%82%A4%E3%82%B9%EF%BC%91%E4%BD%8D.jpg-7Mo9nEzYWgP3zBtwFOrUnT2QoheuAb.jpeg"
                 alt="カット済み1位"
-                fill
-                className="object-contain p-2"
+                className="w-full h-full object-contain p-2"
               />
             </div>
             <div className="relative aspect-square overflow-hidden rounded-lg border border-gray-200">
-              <Image
+              <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E3%83%AC%E3%83%88%E3%83%AB%E3%83%88%E3%83%90%E3%83%A9%E3%83%81%E3%83%A3%E3%83%BC%E3%82%B7%E3%83%A5%E3%83%BC%EF%BC%91%E4%BD%8D.jpg-dGTAABuHwIvkXcOVR7HxPQhJqiTw9g.jpeg"
                 alt="レトルトバラ1位"
-                fill
-                className="object-contain p-2"
+                className="w-full h-full object-contain p-2"
               />
             </div>
             <div className="relative aspect-square overflow-hidden rounded-lg border border-gray-200">
-              <Image
+              <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E3%83%AC%E3%83%88%E3%83%AB%E3%83%88BUTA1%E4%BD%8D.jpg-53fq5t1O6i0mOv7JuM8y9Hw2Ifqg7o.jpeg"
                 alt="レトルトBUTA1位"
-                fill
-                className="object-contain p-2"
+                className="w-full h-full object-contain p-2"
               />
             </div>
           </div>
@@ -222,17 +191,16 @@ export default function ChashuLandingPage() {
             {/* Feature 1 */}
             <Card className="overflow-hidden bg-white border border-gray-200 rounded-2xl shadow-sm">
               <div className="relative aspect-[4/3]">
-                <Image
+                <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E7%82%AD%E9%85%B8%E7%85%AE%E8%BE%BC%E3%81%BF_%E3%82%A2%E3%83%BC%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%201.jpg-8DGxjSTAVxdNmqBeyGcbfkVdmvtTQI.jpeg"
                   alt="低温長時間調理"
-                  fill
-                  className="object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <CardContent className="p-5 md:p-6">
-                <h3 className="text-lg md:text-xl font-bold mb-2 text-gray-900">① 低温長時間 × 炭酸</h3>
-                <p className="text-[15px] md:text-base text-gray-700 leading-relaxed">
-                  低温でじっくり、炭酸で臭みを抑え、旨味を閉じ込めた<strong>しっとり柔らか</strong>。
+                <h3 className="text-xl md:text-xl font-bold mb-2 text-gray-900">① 低温長時間 × 炭酸</h3>
+                <p className="text-base md:text-base text-gray-700 leading-[1.6]">
+                  低温でじっくり、<br className="sm:hidden" />炭酸で臭みを抑え、<br className="sm:hidden" />旨味を閉じ込めた<br className="sm:hidden" /><strong>しっとり柔らか</strong>。
                 </p>
               </CardContent>
             </Card>
@@ -240,17 +208,16 @@ export default function ChashuLandingPage() {
             {/* Feature 2 */}
             <Card className="overflow-hidden bg-white border border-gray-200 rounded-2xl shadow-sm">
               <div className="relative aspect-[4/3]">
-                <Image
+                <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E8%82%B2%E3%81%A6%E3%81%9F%E3%81%9F%E3%82%8C_%E3%82%A2%E3%83%BC%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%201.jpg-r0vJfyg5MaPar3ylcx1ZNSuENdPGQr.jpeg"
                   alt="秘伝のタレ"
-                  fill
-                  className="object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <CardContent className="p-5 md:p-6">
-                <h3 className="text-lg md:text-xl font-bold mb-2 text-gray-900">② 秘伝の「育てるタレ」</h3>
-                <p className="text-[15px] md:text-base text-gray-700 leading-relaxed">
-                  継ぎ足し特製だれへ<strong>熱々のまま一晩</strong>。肉汁が溶け込み<strong>ゼラチン化</strong>―まさに<strong>旨味の塊</strong>。
+                <h3 className="text-xl md:text-xl font-bold mb-2 text-gray-900">② 秘伝の「育てるタレ」</h3>
+                <p className="text-base md:text-base text-gray-700 leading-[1.6]">
+                  継ぎ足し特製だれへ<br className="sm:hidden" /><strong>熱々のまま一晩</strong>。<br className="sm:hidden" />肉汁が溶け込み<br className="sm:hidden" /><strong>ゼラチン化</strong>―<br className="sm:hidden" />まさに<strong>旨味の塊</strong>。
                 </p>
               </CardContent>
             </Card>
@@ -258,17 +225,16 @@ export default function ChashuLandingPage() {
             {/* Feature 3 */}
             <Card className="overflow-hidden bg-white border border-gray-200 rounded-2xl shadow-sm">
               <div className="relative aspect-[4/3]">
-                <Image
+                <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E8%81%B7%E4%BA%BA%E3%81%AE%E6%8A%80_%E3%82%A2%E3%83%BC%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%201.jpg-8WQrHKsdxK0zYdRbfz70hfdViplR8g.jpeg"
                   alt="熟練職人の手仕事"
-                  fill
-                  className="object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <CardContent className="p-5 md:p-6">
-                <h3 className="text-lg md:text-xl font-bold mb-2 text-gray-900">③ 職人の手仕事</h3>
-                <p className="text-[15px] md:text-base text-gray-700 leading-relaxed">
-                  <strong>熟練の技法ゆえ大量生産はできません。</strong>部位を見極め一つひとつ仕込み、豚本来の旨味を最大限に。
+                <h3 className="text-xl md:text-xl font-bold mb-2 text-gray-900">③ 職人の手仕事</h3>
+                <p className="text-base md:text-base text-gray-700 leading-[1.6]">
+                  <strong>熟練の技法ゆえ<br className="sm:hidden" />大量生産はできません。</strong><br className="sm:hidden" />部位を見極め<br className="sm:hidden" />一つひとつ仕込み、<br className="sm:hidden" />豚本来の旨味を最大限に。
                 </p>
               </CardContent>
             </Card>
@@ -285,25 +251,23 @@ export default function ChashuLandingPage() {
 
           <div className="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 mb-5 md:mb-8">
             <div className="relative aspect-[3/2] rounded-xl overflow-hidden border border-gray-200">
-              <Image
+              <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E8%B1%9A%E8%88%8E%E3%81%A8%E7%94%9F%E7%94%A3%E8%80%85%EF%BC%88%E7%94%9F%E6%88%90%EF%BC%89.jpg-Fpegb4HOwjBMX2CXf2AnbrkgAO09GN.jpeg"
                 alt="スペインの養豚農場と生産者"
-                fill
-                className="object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
             <div className="relative aspect-[3/2] rounded-xl overflow-hidden border border-gray-200">
-              <Image
+              <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%B9%E3%83%9A%E3%82%A4%E3%83%B3%E8%82%89%E8%B3%AA_%E3%82%A2%E3%83%BC%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%201.jpg-8odUEeZXMUz5pWNVxDNoBBwCY0KOCj.jpeg"
                 alt="スペイン産豚バラの断面"
-                fill
-                className="object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
 
-          <p className="mx-auto max-w-3xl text-[15px] md:text-lg text-gray-700 leading-relaxed text-center">
-            赤身は柔らかく、脂は香ばしくすっきり。世界が認める品質と旨味を、ご家庭でも気軽に味わえます。
+          <p className="mx-auto max-w-3xl text-base md:text-lg text-gray-700 leading-[1.7] text-center">
+            赤身は柔らかく、<br className="sm:hidden" />脂は香ばしくすっきり。<br className="sm:hidden" />世界が認める品質と旨味を、<br className="sm:hidden" />ご家庭でも気軽に味わえます。
           </p>
         </div>
       </section>
@@ -319,19 +283,18 @@ export default function ChashuLandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16 max-w-6xl mx-auto">
             <Card className="overflow-hidden bg-white border border-gray-200 rounded-2xl shadow-sm">
               <div className="relative aspect-square">
-                <Image
+                <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E5%86%B7%E5%87%8D%EF%BC%88%E3%82%AB%E3%83%83%E3%83%88%E6%B8%88%E3%81%BF%EF%BC%89-01.jpg-VHSSzgCFyGvKl17Eoxft2qGAyRHOLj.jpeg"
                   alt="カット済みチャーシュー800g"
-                  fill
-                  className="object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <CardContent className="p-5 md:p-6">
-                <h4 className="text-lg md:text-xl font-bold mb-3 text-gray-900">ラーメン屋が作る本物のチャーシューカット済み800g</h4>
-                <ul className="text-[15px] md:text-sm text-gray-700 space-y-2 mb-4">
-                  <li>・扱いやすいカット済み＆小分け包装で、必要な分だけ解凍してすぐ使える便利さ。</li>
-                  <li>・ラーメンのトッピングはもちろん、チャーハンや丼物にも相性抜群。</li>
-                  <li>・「普段の食事をワンランクアップ」させる万能チャーシュー。</li>
+                <h4 className="text-xl md:text-xl font-bold mb-3 text-gray-900">ラーメン屋がつくる<br className="sm:hidden" />本物のチャーシュー<br className="sm:hidden" />カット済み800g</h4>
+                <ul className="text-base md:text-sm text-gray-700 space-y-2 mb-4">
+                  <li>・扱いやすいカット済み＆<br className="sm:hidden" />　小分け包装で、必要な分だけ<br className="sm:hidden" />　解凍してすぐ使える便利さ。</li>
+                  <li>・ラーメンのトッピングはもちろん、<br className="sm:hidden" />　チャーハンや丼物にも相性抜群。</li>
+                  <li>・「普段の食事をワンランクアップ」<br className="sm:hidden" />　させる万能チャーシュー。</li>
                 </ul>
                 <p className="text-2xl font-bold text-amber-600">4,290円（税・送料込）</p>
               </CardContent>
@@ -339,19 +302,18 @@ export default function ChashuLandingPage() {
 
             <Card className="overflow-hidden bg-white border border-gray-200 rounded-2xl shadow-sm">
               <div className="relative aspect-square">
-                <Image
+                <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E5%86%B7%E5%87%8D%EF%BC%88%E8%A8%B3%E3%82%A2%E3%83%AA%EF%BC%89-01.jpg-5NHQ04cVrUlWIXjCiJrvxFq2welhBq.jpeg"
                   alt="訳ありチャーシュー1kg"
-                  fill
-                  className="object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <CardContent className="p-5 md:p-6">
-                <h4 className="text-lg md:text-xl font-bold mb-3 text-gray-900">ラーメン屋が作る本物のチャーシュー訳あり1kg</h4>
-                <ul className="text-[15px] md:text-sm text-gray-700 space-y-2 mb-4">
-                  <li>・形が不揃いなだけで、味・品質は正規品と同じ。</li>
-                  <li>・200gの小分けパックで保存も調理もラク。</li>
-                  <li>・とにかく量を楽しみたい方におすすめ。</li>
+                <h4 className="text-xl md:text-xl font-bold mb-3 text-gray-900">ラーメン屋がつくる<br className="sm:hidden" />本物のチャーシュー<br className="sm:hidden" />訳あり1kg</h4>
+                <ul className="text-base md:text-sm text-gray-700 space-y-2 mb-4">
+                  <li>・形が不揃いなだけで、<br className="sm:hidden" />　味・品質は正規品と同じ。</li>
+                  <li>・200gの小分けパックで<br className="sm:hidden" />　保存も調理もラク。</li>
+                  <li>・とにかく量を楽しみたい方に<br className="sm:hidden" />　おすすめ。</li>
                 </ul>
                 <p className="text-2xl font-bold text-amber-600">4,290円（税・送料込）</p>
               </CardContent>
@@ -362,17 +324,17 @@ export default function ChashuLandingPage() {
           <div className="max-w-md mx-auto">
             <Card className="overflow-hidden bg-white border border-gray-200 rounded-2xl shadow-sm">
               <div className="relative aspect-square">
-                <Image src={tareImage} alt="チャーシュー専用だれ" fill className="object-cover" />
+                <img src="/tare.jpg" alt="チャーシュー専用だれ" className="w-full h-full object-cover" />
               </div>
               <CardContent className="p-5 md:p-6">
-                <h4 className="text-lg md:text-xl font-bold mb-3 text-gray-900">
-                  ラーメン屋が作る本物のチャーシュー専用だれ（80cc × 3個セット）
+                <h4 className="text-xl md:text-xl font-bold mb-3 text-gray-900">
+                  ラーメン屋がつくる<br className="sm:hidden" />本物のチャーシュー<br className="sm:hidden" />専用だれ<br className="sm:hidden" />（80cc × 3個セット）
                 </h4>
-                <ul className="text-[15px] md:text-sm text-gray-700 space-y-2 mb-4">
-                  <li>・清酒・本みりんを使用し、雑味のない奥深い旨味を実現。</li>
-                  <li>・会津ブランド館のチャーシューに最適な和風仕立て。</li>
-                  <li>・そのままかけても、漬けて焼いても美味しく召し上がれます。</li>
-                  <li>・常温保存が可能で、賞味期限は製造より3ヶ月。</li>
+                <ul className="text-base md:text-sm text-gray-700 space-y-2 mb-4">
+                  <li>・清酒・本みりんを使用し、<br className="sm:hidden" />　雑味のない奥深い旨味を実現。</li>
+                  <li>・会津ブランド館のチャーシューに<br className="sm:hidden" />　最適な和風仕立て。</li>
+                  <li>・そのままかけても、<br className="sm:hidden" />　漬けて焼いても美味しく<br className="sm:hidden" />　召し上がれます。</li>
+                  <li>・常温保存が可能で、<br className="sm:hidden" />　賞味期限は製造より3ヶ月。</li>
                 </ul>
                 <p className="text-2xl font-bold text-amber-600">1,500円（税・送料込）</p>
               </CardContent>
@@ -389,11 +351,10 @@ export default function ChashuLandingPage() {
           <div className="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             <div className="text-center">
               <div className="relative aspect-square mb-4 rounded-xl overflow-hidden shadow-sm">
-                <Image
+                <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%81%E3%83%A3%E3%83%BC%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%A1%E3%83%B3.jpg-BRY4QwKm0vLWdOaUAN3rRMiKqZmg8V.jpeg"
                   alt="チャーシューメン"
-                  fill
-                  className="object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <h3 className="text-lg md:text-xl font-bold mb-2 text-gray-900">チャーシューメン</h3>
@@ -402,11 +363,10 @@ export default function ChashuLandingPage() {
 
             <div className="text-center">
               <div className="relative aspect-square mb-4 rounded-xl overflow-hidden shadow-sm">
-                <Image
+                <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E7%82%92%E9%A3%AF.jpg-7uRpeKi7AaEHlHD8LQDDI9STJtt6bG.jpeg"
                   alt="チャーシュー炒飯"
-                  fill
-                  className="object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <h3 className="text-lg md:text-xl font-bold mb-2 text-gray-900">チャーシュー炒飯</h3>
@@ -415,11 +375,10 @@ export default function ChashuLandingPage() {
 
             <div className="text-center">
               <div className="relative aspect-square mb-4 rounded-xl overflow-hidden shadow-sm">
-                <Image
+                <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%81%E3%83%A3%E3%83%BC%E3%82%B7%E3%83%A5%E3%83%BC%E4%B8%BC.jpg-K4YbZqzW9pI4v9mLr2NV9zatC5cMI9.jpeg"
                   alt="チャーシュー丼"
-                  fill
-                  className="object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <h3 className="text-lg md:text-xl font-bold mb-2 text-gray-900">チャーシュー丼</h3>
@@ -433,7 +392,7 @@ export default function ChashuLandingPage() {
       <section id="reviews" className="py-10 md:py-16 bg-gray-50">
         <div className="mx-auto max-w-7xl px-3 md:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-4 md:mb-6 text-gray-900">お客様の声</h2>
-        <p className="text-center text-gray-600 mb-6 md:mb-10 text-sm md:text-base px-2">
+          <p className="text-center text-gray-600 mb-6 md:mb-10 text-sm md:text-base px-2">
             これらは実際のECサイトに投稿されているものを抜粋させて頂きました。ご購入の際のご参考にどうぞ
           </p>
 
@@ -441,11 +400,9 @@ export default function ChashuLandingPage() {
             {reviews.map((review, i) => (
               <Card key={i} className="p-4 md:p-6 bg-white border border-gray-200 rounded-2xl shadow-sm">
                 <div className="flex items-start gap-3 md:gap-4">
-                  <Image
+                  <img
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%81%8A%E5%AE%A2%E6%A7%98%E3%81%AE%E5%A3%B0%E7%94%B7%E6%80%A7%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88%EF%BC%88AI%EF%BC%89.jpg-vtfT6kIozW2PCIgSlbHhvpRa1H3IAA.jpeg"
                     alt={`お客様 ${i + 1}`}
-                    width={40}
-                    height={40}
                     className="rounded-full w-8 h-8 md:w-12 md:h-12 flex-shrink-0"
                   />
                   <div className="flex-1 min-w-0">
@@ -479,19 +436,17 @@ export default function ChashuLandingPage() {
         <div className="mx-auto max-w-7xl px-3 md:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="relative aspect-[3/2] overflow-hidden rounded-xl border border-gray-200">
-              <Image
+              <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E9%80%81%E6%96%99%E7%84%A1%E6%96%99-01.jpg-TumFDrStQKWbfHPR6ScP7lMSmHViX6.jpeg"
                 alt="送料無料 全国一律"
-                fill
-                className="object-contain p-3"
+                className="w-full h-full object-contain p-3"
               />
             </div>
             <div className="relative aspect-[3/2] overflow-hidden rounded-xl border border-gray-200">
-              <Image
+              <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E5%8D%B3%E6%97%A5%E7%99%BA%E9%80%81-01.jpg-4fR4g1YVfk3D7oD9xYk8ElwVNHmNTG.jpeg"
                 alt="即日配送"
-                fill
-                className="object-contain p-3"
+                className="w-full h-full object-contain p-3"
               />
             </div>
           </div>
@@ -501,47 +456,44 @@ export default function ChashuLandingPage() {
       {/* Emotional */}
       <section className="py-14 md:py-16 bg-white text-gray-900">
         <div className="mx-auto max-w-7xl px-3 md:px-6 lg:px-8">
-          <div className="mx-auto max-w-6xl grid grid-cols-3 gap-2 md:gap-8">
+          <div className="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             <div className="text-center">
-              <div className="relative aspect-square mb-2 md:mb-4 rounded-lg md:rounded-xl overflow-hidden">
-                <Image
+              <div className="relative aspect-square mb-4 rounded-xl overflow-hidden">
+                <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%9C%AC%E7%89%A9%5B1%5D.jpg-kIUM7GXHcqmgfwz64cGzonnhxJSrzK.jpeg"
                   alt="一人でラーメンを楽しむ"
-                  fill
-                  className="object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
-              <ul className="text-[13px] md:text-lg leading-relaxed text-gray-700 text-left list-disc list-inside">
-                <li>スーパーでは手に入らない"本物"を、自分の部屋でゆっくり味わう。至高の一杯がここにあります。</li>
-              </ul>
+              <p className="text-[15px] md:text-lg leading-relaxed text-gray-700">
+                スーパーでは手に入らない"本物"を、自分の部屋でゆっくり味わう。至高の一杯がここにあります。
+              </p>
             </div>
 
             <div className="text-center">
-              <div className="relative aspect-square mb-2 md:mb-4 rounded-lg md:rounded-xl overflow-hidden">
-                <Image
+              <div className="relative aspect-square mb-4 rounded-xl overflow-hidden">
+                <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E5%9B%A3%E3%82%89%E3%82%93%5B1%5D.jpg-4uArVxvXvQQmSNi3ozVZ0OUsZeBIXm.jpeg"
                   alt="家族でラーメンを楽しむ"
-                  fill
-                  className="object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
-              <ul className="text-[13px] md:text-lg leading-relaxed text-gray-700 text-left list-disc list-inside">
-                <li>家族みんなで分け合える本物チャーシュー。食卓に団らんと絆を生む、特別な一皿です。</li>
-              </ul>
+              <p className="text-[15px] md:text-lg leading-relaxed text-gray-700">
+                家族みんなで分け合える本物チャーシュー。食卓に団らんと絆を生む、特別な一皿です。
+              </p>
             </div>
 
             <div className="text-center">
-              <div className="relative aspect-square mb-2 md:mb-4 rounded-lg md:rounded-xl overflow-hidden">
-                <Image
+              <div className="relative aspect-square mb-4 rounded-xl overflow-hidden">
+                <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%81%94%E8%A4%92%E7%BE%8E%5B1%5D.jpg-oJNJWSEy6EpevcqrREbQd5DB3SjqYT.jpeg"
                   alt="自分へのご褒美ラーメン"
-                  fill
-                  className="object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
-              <ul className="text-[13px] md:text-lg leading-relaxed text-gray-700 text-left list-disc list-inside">
-                <li>外食を減らしても贅沢はできる。物価高の今こそ、家で本格ラーメンを。頑張る自分へのご褒美に。</li>
-              </ul>
+              <p className="text-[15px] md:text-lg leading-relaxed text-gray-700">
+                外食を減らしても贅沢はできる。物価高の今こそ、家で本格ラーメンを。頑張る自分へのご褒美に。
+              </p>
             </div>
           </div>
         </div>
@@ -560,12 +512,10 @@ export default function ChashuLandingPage() {
                 <div className="text-center">
                   <a href="https://store.shopping.yahoo.co.jp/aizubrandhall/a5b9a5bfa5.html" target="_blank" rel="noopener noreferrer" className="block">
                     <div className="bg-white p-3 md:p-4 rounded-lg mb-3 md:mb-4 mx-auto max-w-xs hover:shadow-md transition-shadow">
-                      <Image
+                      <img
                         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/yahoo%E8%B3%BC%E5%85%A5%E3%83%9C%E3%82%BF%E3%83%B3-01-o2By6df7JqQxsMmDbxQkB96j4xvzo7.png"
                         alt="Yahoo!で購入"
-                        width={200}
-                        height={150}
-                        className="object-contain mx-auto"
+                        className="w-full h-auto object-contain mx-auto"
                       />
                     </div>
                   </a>
@@ -578,12 +528,10 @@ export default function ChashuLandingPage() {
                 <div className="text-center">
                   <a href="https://item.rakuten.co.jp/aizubrandhall/c/0000000024/" target="_blank" rel="noopener noreferrer" className="block">
                     <div className="bg-white p-3 md:p-4 rounded-lg mb-3 md:mb-4 mx-auto max-w-xs hover:shadow-md transition-shadow">
-                      <Image
+                      <img
                         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E8%B3%BC%E5%85%A5%E3%83%9C%E3%82%BF%E3%83%B3-01-T1kz4cuzdoGCnAcHvSwGBuBQsfKTIJ.png"
                         alt="楽天で購入"
-                        width={200}
-                        height={150}
-                        className="object-contain mx-auto"
+                        className="w-full h-auto object-contain mx-auto"
                       />
                     </div>
                   </a>
@@ -596,12 +544,10 @@ export default function ChashuLandingPage() {
                 <div className="text-center">
                   <a href="https://www.amazon.co.jp/stores/page/485187F9-700A-4C89-85F3-3E4A7A7414EF" target="_blank" rel="noopener noreferrer" className="block">
                     <div className="bg-white p-3 md:p-4 rounded-lg mb-3 md:mb-4 mx-auto max-w-xs hover:shadow-md transition-shadow">
-                      <Image
+                      <img
                         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Amazon%E8%B3%BC%E5%85%A5%E3%83%9C%E3%82%BF%E3%83%B3-01-XpiFG2txGHCy5bDQenrvFikQe3Alx7.png"
                         alt="Amazonで購入"
-                        width={200}
-                        height={150}
-                        className="object-contain mx-auto"
+                        className="w-full h-auto object-contain mx-auto"
                       />
                     </div>
                   </a>
@@ -620,12 +566,10 @@ export default function ChashuLandingPage() {
                 <div className="text-center">
                   <a href="https://store.shopping.yahoo.co.jp/aizubrandhall/b7e3b0c2a5.html" target="_blank" rel="noopener noreferrer" className="block">
                     <div className="bg-white p-3 md:p-4 rounded-lg mb-3 md:mb-4 mx-auto max-w-xs hover:shadow-md transition-shadow">
-                      <Image
+                      <img
                         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/yahoo%E8%B3%BC%E5%85%A5%E3%83%9C%E3%82%BF%E3%83%B3-01-o2By6df7JqQxsMmDbxQkB96j4xvzo7.png"
                         alt="Yahoo!で購入"
-                        width={200}
-                        height={150}
-                        className="object-contain mx-auto"
+                        className="w-full h-auto object-contain mx-auto"
                       />
                     </div>
                   </a>
@@ -638,12 +582,10 @@ export default function ChashuLandingPage() {
                 <div className="text-center">
                   <a href="https://item.rakuten.co.jp/aizubrandhall/c/0000000016/" target="_blank" rel="noopener noreferrer" className="block">
                     <div className="bg-white p-3 md:p-4 rounded-lg mb-3 md:mb-4 mx-auto max-w-xs hover:shadow-md transition-shadow">
-                      <Image
+                      <img
                         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E8%B3%BC%E5%85%A5%E3%83%9C%E3%82%BF%E3%83%B3-01-T1kz4cuzdoGCnAcHvSwGBuBQsfKTIJ.png"
                         alt="楽天で購入"
-                        width={200}
-                        height={150}
-                        className="object-contain mx-auto"
+                        className="w-full h-auto object-contain mx-auto"
                       />
                     </div>
                   </a>
@@ -656,12 +598,10 @@ export default function ChashuLandingPage() {
                 <div className="text-center">
                   <a href="https://www.amazon.co.jp/stores/page/222C75F5-2370-44E0-8D9A-B26A33B10DCA" target="_blank" rel="noopener noreferrer" className="block">
                     <div className="bg-white p-3 md:p-4 rounded-lg mb-3 md:mb-4 mx-auto max-w-xs hover:shadow-md transition-shadow">
-                      <Image
+                      <img
                         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Amazon%E8%B3%BC%E5%85%A5%E3%83%9C%E3%82%BF%E3%83%B3-01-XpiFG2txGHCy5bDQenrvFikQe3Alx7.png"
                         alt="Amazonで購入"
-                        width={200}
-                        height={150}
-                        className="object-contain mx-auto"
+                        className="w-full h-auto object-contain mx-auto"
                       />
                     </div>
                   </a>
@@ -685,18 +625,17 @@ export default function ChashuLandingPage() {
                 <p>〒965-0044</p>
                 <p>福島県会津若松市七日町6-15</p>
                 <p>TEL: 0242-25-1441</p>
-                <p>営業時間: 11時〜16時</p>
+                <p>営業時間: 11時～16時</p>
                 <p>定休日: 12月31日・1月1日</p>
                 <p className="text-xs md:text-sm text-gray-600">（年末年始はお休みさせて頂きます）</p>
               </div>
             </div>
 
             <div className="relative aspect-video overflow-hidden rounded-xl shadow-sm">
-              <Image
+              <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E4%BC%9A%E6%B4%A5%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89%E9%A4%A8%E5%A4%96%E8%A6%B3.jpg-3EilSvcOQOq0DLVyhx9qBG4bUhtIKC.jpeg"
                 alt="会津ブランド館の外観"
-                fill
-                className="object-cover w-full h-full"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
