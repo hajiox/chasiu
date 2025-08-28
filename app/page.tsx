@@ -327,7 +327,7 @@ export default function ChashuLandingPage() {
             <Card className="overflow-hidden bg-white border border-gray-200 rounded-2xl shadow-sm">
               <div className="relative aspect-square">
                 <img
-                  src="/retorutobara.jpg"
+                  src="/retorutobuta.jpg"
                   alt="レトルト極厚カット650g"
                   className="w-full h-full object-cover"
                 />
@@ -339,14 +339,14 @@ export default function ChashuLandingPage() {
                   <li>・常温保存できるので<br className="sm:hidden" />　買い置きに便利。</li>
                   <li>・個包装で扱いやすく<br className="sm:hidden" />　必要な分だけ使える。</li>
                 </ul>
-                <p className="text-2xl font-bold text-amber-600">3,980円（税・送料込）</p>
+                <p className="text-2xl font-bold text-amber-600">2,800円（税・送料込）</p>
               </CardContent>
             </Card>
 
             <Card className="overflow-hidden bg-white border border-gray-200 rounded-2xl shadow-sm">
               <div className="relative aspect-square">
                 <img
-                  src="/retorutobuta.jpg"
+                  src="/retorutobara.jpg"
                   alt="レトルト中厚スライス400g"
                   className="w-full h-full object-cover"
                 />
@@ -358,7 +358,7 @@ export default function ChashuLandingPage() {
                   <li>・枚数が多くて<br className="sm:hidden" />　使い勝手バツグン。</li>
                   <li>・非常食としても<br className="sm:hidden" />　常備できる安心感。</li>
                 </ul>
-                <p className="text-2xl font-bold text-amber-600">2,980円（税・送料込）</p>
+                <p className="text-2xl font-bold text-amber-600">2,300円（税・送料込）</p>
               </CardContent>
             </Card>
           </div>
@@ -379,7 +379,7 @@ export default function ChashuLandingPage() {
                   <li>・そのままかけても、<br className="sm:hidden" />　漬けて焼いても美味しく<br className="sm:hidden" />　召し上がれます。</li>
                   <li>・常温保存が可能で、<br className="sm:hidden" />　賞味期限は製造より3ヶ月。</li>
                 </ul>
-                <p className="text-2xl font-bold text-amber-600">1,500円（税・送料込）</p>
+                <p className="text-2xl font-bold text-amber-600">1,000円（税・送料込）</p>
               </CardContent>
             </Card>
           </div>
