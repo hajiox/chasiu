@@ -107,7 +107,9 @@ export default function ChashuLandingPage() {
             className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4 md:mb-6 lg:mb-8 text-gray-900"
             style={{ wordBreak: "keep-all", lineBreak: "strict" }}
           >
-            いつもありがとうございます。沢山のお客様にご好評頂いています。
+            いつもありがとうございます。<br className="sm:hidden" />
+            沢山のお客様に<br className="sm:hidden" />
+            ご好評頂いています。
           </h2>
 
           {/* Top Row - Awards */}
