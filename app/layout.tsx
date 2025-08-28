@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: "https://chasiu.aizu-syokubura.com/",
     images: [
       {
-        url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/OGP_%E3%82%A2%E3%83%BC%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%201.jpg-BMdcg9s5JIa43MvynMs4FFcxtEqr63.jpeg",
+        url: "https://chasiu.aizu-syokubura.com/ogp-image.jpg",
         width: 1200,
         height: 630,
         alt: "会津ブランド館の極上チャーシュー",
@@ -32,9 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "会津ブランド館 極上チャーシュー | 累計10万食突破の人気商品を通販で",
     description: "楽天市場月間優良ショップ受賞！会津の老舗が作る極上チャーシューをご家庭で。",
-    images: [
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/OGP_%E3%82%A2%E3%83%BC%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%201.jpg-BMdcg9s5JIa43MvynMs4FFcxtEqr63.jpeg",
-    ],
+    images: ["https://chasiu.aizu-syokubura.com/ogp-image.jpg"],
   },
   keywords:
     "チャーシュー,会津ブランド館,冷凍チャーシュー,レトルトチャーシュー,福島県,会津若松,本格派,職人,ラーメン具材,楽天,Amazon,Yahoo",
