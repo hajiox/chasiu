@@ -327,7 +327,7 @@ export default function ChashuLandingPage() {
             <Card className="overflow-hidden bg-white border border-gray-200 rounded-2xl shadow-sm">
               <div className="relative aspect-square">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%AC%E3%83%88%E3%83%AB%E3%83%88%EF%BC%88%E6%A5%B5%E5%8E%9A%E3%82%AB%E3%83%83%E3%83%88%EF%BC%89-01.jpg-xxxxxxxxxxx.jpeg"
+                  src="/retorutobara.jpg"
                   alt="レトルト極厚カット650g"
                   className="w-full h-full object-cover"
                 />
@@ -346,7 +346,7 @@ export default function ChashuLandingPage() {
             <Card className="overflow-hidden bg-white border border-gray-200 rounded-2xl shadow-sm">
               <div className="relative aspect-square">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%AC%E3%83%88%E3%83%AB%E3%83%88%EF%BC%88%E4%B8%AD%E5%8E%9A%E3%82%B9%E3%83%A9%E3%82%A4%E3%82%B9%EF%BC%89-01.jpg-xxxxxxxxxxx.jpeg"
+                  src="/retorutobuta.jpg"
                   alt="レトルト中厚スライス400g"
                   className="w-full h-full object-cover"
                 />
