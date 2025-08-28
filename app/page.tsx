@@ -322,6 +322,47 @@ export default function ChashuLandingPage() {
             </Card>
           </div>
 
+          {/* レトルト商品 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16 max-w-6xl mx-auto">
+            <Card className="overflow-hidden bg-white border border-gray-200 rounded-2xl shadow-sm">
+              <div className="relative aspect-square">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%AC%E3%83%88%E3%83%AB%E3%83%88%EF%BC%88%E6%A5%B5%E5%8E%9A%E3%82%AB%E3%83%83%E3%83%88%EF%BC%89-01.jpg-xxxxxxxxxxx.jpeg"
+                  alt="レトルト極厚カット650g"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <CardContent className="p-5 md:p-6">
+                <h4 className="text-xl md:text-xl font-bold mb-3 text-gray-900">ラーメン屋がつくる<br className="sm:hidden" />本物のチャーシュー<br className="sm:hidden" />極厚カット650g</h4>
+                <ul className="text-base md:text-sm text-gray-700 space-y-2 mb-4">
+                  <li>・二郎系ラーメンにピッタリの<br className="sm:hidden" />　極厚カット。</li>
+                  <li>・常温保存できるので<br className="sm:hidden" />　買い置きに便利。</li>
+                  <li>・個包装で扱いやすく<br className="sm:hidden" />　必要な分だけ使える。</li>
+                </ul>
+                <p className="text-2xl font-bold text-amber-600">3,980円（税・送料込）</p>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden bg-white border border-gray-200 rounded-2xl shadow-sm">
+              <div className="relative aspect-square">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%AC%E3%83%88%E3%83%AB%E3%83%88%EF%BC%88%E4%B8%AD%E5%8E%9A%E3%82%B9%E3%83%A9%E3%82%A4%E3%82%B9%EF%BC%89-01.jpg-xxxxxxxxxxx.jpeg"
+                  alt="レトルト中厚スライス400g"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <CardContent className="p-5 md:p-6">
+                <h4 className="text-xl md:text-xl font-bold mb-3 text-gray-900">ラーメン屋がつくる<br className="sm:hidden" />本物のチャーシュー<br className="sm:hidden" />中厚スライス400g</h4>
+                <ul className="text-base md:text-sm text-gray-700 space-y-2 mb-4">
+                  <li>・インスタントラーメンが<br className="sm:hidden" />　一気に豪華に。</li>
+                  <li>・枚数が多くて<br className="sm:hidden" />　使い勝手バツグン。</li>
+                  <li>・非常食としても<br className="sm:hidden" />　常備できる安心感。</li>
+                </ul>
+                <p className="text-2xl font-bold text-amber-600">2,980円（税・送料込）</p>
+              </CardContent>
+            </Card>
+          </div>
+
           {/* Related Product */}
           <div className="max-w-md mx-auto">
             <Card className="overflow-hidden bg-white border border-gray-200 rounded-2xl shadow-sm">
