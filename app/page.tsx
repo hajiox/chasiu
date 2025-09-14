@@ -103,7 +103,7 @@ export default function ChashuLandingPage() {
         <div className="relative w-full h-full overflow-hidden">
           {/* Main Image */}
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB_%E3%82%A2%E3%83%BC%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%201.jpg-NuZgGbPSuDie1LK9TnuhhEZiHR2fcf.jpeg"
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB_%E3%82%A2%E3%83%BC%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%20.jpg-J7p6hffiBExZOB1fbCdrWy6RxXm5DV.jpeg"
             alt="ラーメン屋が作る本物のチャーシュー"
             fill
             className="object-cover object-center"
@@ -492,7 +492,7 @@ export default function ChashuLandingPage() {
               <Card className="overflow-hidden bg-white border-gray-200 shadow-md">
                 <div className="relative aspect-square">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%81%8A%E5%AE%A2%E6%A7%98%E3%81%AE%E6%96%87%E5%8F%B7.jpg-KWGPebXrM4Wz0wSjsx78RIplx6Uv9o.jpeg"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tare.jpg-eFq7PkUVaGQmwfqlf88PKWLVRQsjo6.jpeg"
                     alt="チャーシュー専用だれ"
                     fill
                     className="object-cover"
