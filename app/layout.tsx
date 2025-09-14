@@ -6,22 +6,21 @@ import "./globals.css"
 import Script from "next/script"
 
 export const metadata: Metadata = {
-  title: "会津ブランド館 極上チャーシュー | 累計10万食突破の人気商品を通販で",
+  title: "会津ブランド館 極上チャーシュー | 楽天月間優良ショップ受賞の本格派",
   description:
-    "楽天市場月間優良ショップ受賞！会津の老舗が作る極上チャーシュー。冷凍・レトルトの2種類をご用意。職人の技が光る本格的な味をご家庭で。全国配送対応。",
-  metadataBase: new URL("https://chasiu.aizu-syokubura.com"),
-  alternates: { canonical: "/" },
+    "楽天市場月間優良ショップ受賞！会津の老舗が作る極上チャーシュー。冷凍・レトルト2種類をご用意。職人の技が光る本格的な味をご家庭で。全国配送対応。",
+  metadataBase: new URL("https://chasieu.aizu-syokubura.com"),
   openGraph: {
-    title: "会津ブランド館 極上チャーシュー | 累計10万食突破の人気商品を通販で",
+    title: "会津ブランド館 極上チャーシュー | 楽天月間優良ショップ受賞",
     description:
-      "楽天市場月間優良ショップ受賞！会津の老舗が作る極上チャーシュー。冷凍・レトルトの2種類をご用意。職人の技が光る本格的な味をご家庭で。",
-    url: "https://chasiu.aizu-syokubura.com/",
+      "楽天市場月間優良ショップ受賞！会津の老舗が作る極上チャーシュー。冷凍・レトルト2種類をご用意。職人の技が光る本格的な味をご家庭で。",
+    url: "https://chasieu.aizu-syokubura.com",
     images: [
       {
-        url: "https://chasiu.aizu-syokubura.com/ogp-image.jpg",
+        url: "/ogp-image-new.jpg",
         width: 1200,
         height: 630,
-        alt: "会津ブランド館の極上チャーシュー",
+        alt: "会津ブランド館の極上チャーシュー - 箸で持ち上げられた美味しそうなチャーシュー",
       },
     ],
     locale: "ja_JP",
@@ -30,16 +29,20 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "会津ブランド館 極上チャーシュー | 累計10万食突破の人気商品を通販で",
+    title: "会津ブランド館 極上チャーシュー | 楽天月間優良ショップ受賞",
     description: "楽天市場月間優良ショップ受賞！会津の老舗が作る極上チャーシューをご家庭で。",
-    images: ["https://chasiu.aizu-syokubura.com/ogp-image.jpg"],
+    images: ["/ogp-image-new.jpg"],
   },
   keywords:
-    "チャーシュー,会津ブランド館,冷凍チャーシュー,レトルトチャーシュー,福島県,会津若松,本格派,職人,ラーメン具材,楽天,Amazon,Yahoo",
-  generator: "v0.app",
+    "チャーシュー,会津ブランド館,楽天月間優良ショップ,冷凍チャーシュー,レトルトチャーシュー,福島県,会津若松,本格派,職人,ラーメン具材",
+    generator: 'v0.app'
 }
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
   return (
     <html lang="ja">
       <head>
@@ -60,7 +63,7 @@ html {
 }
         `}</style>
       </head>
-      <body className="min-h-screen bg-white text-gray-900 antialiased">{children}</body>
+      <body>{children}</body>
     </html>
   )
 }
