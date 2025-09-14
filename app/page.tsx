@@ -103,7 +103,7 @@ export default function ChashuLandingPage() {
         <div className="relative w-full h-full overflow-hidden">
           {/* Main Image */}
           <Image
-            src="/main-chashu-image.jpg"
+            src="/main-visual-new.jpg"
             alt="ラーメン屋が作る本物のチャーシュー"
             fill
             className="object-cover object-center"
@@ -251,7 +251,7 @@ export default function ChashuLandingPage() {
             <Card className="overflow-hidden bg-white border-gray-200 shadow-md">
               <div className="relative aspect-[4/3]">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E7%82%AD%E9%85%B8%E7%85%AE%E8%BE%BC%E3%81%BF_%E3%82%A2%E3%83%BC%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%201.jpg-8DGxjSTAVxdNmqBeyGcbfkVdmvtTQI.jpeg"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E7%82%B3%E9%85%B8%E7%85%AE%E8%BE%BC%E3%81%BF_%E3%82%A2%E3%83%BC%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%201.jpg-8DGxjSTAVxdNmqBeyGcbfkVdmvtTQI.jpeg"
                   alt="低温長時間調理"
                   fill
                   className="object-cover"
@@ -272,7 +272,7 @@ export default function ChashuLandingPage() {
             <Card className="overflow-hidden bg-white border-gray-200 shadow-md">
               <div className="relative aspect-[4/3]">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E8%82%B2%E3%81%A6%E3%81%9F%E3%81%9F%E3%82%8C_%E3%82%A2%E3%83%BC%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%201.jpg-r0vJfyg5MaPar3ylcx1ZNSuENdPGQr.jpeg"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E8%82%B2%E3%81%A6%E3%81%9F%E3%82%8C_%E3%82%A2%E3%83%BC%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%201.jpg-r0vJfyg5MaPar3ylcx1ZNSuENdPGQr.jpeg"
                   alt="秘伝のタレ"
                   fill
                   className="object-cover"
@@ -562,6 +562,8 @@ export default function ChashuLandingPage() {
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-900">チャーシュー丼</h3>
               <p className="text-gray-700 leading-relaxed">軽く炙れば最強のチャーシュー丼のできあがり</p>
+            </CardContent>
+              </Card>
             </div>
           </div>
         </div>
