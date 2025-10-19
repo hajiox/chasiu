@@ -87,7 +87,7 @@ export default function ChashuLandingPage() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-center">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%98%E3%83%83%E3%82%BF%E3%83%BC%E7%94%A8%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89%E9%A4%A8%E3%83%AD%E3%82%B4.jpg-ciMUhnsgrxSQlKvO7LflyWckIBx7b3.jpeg"
+              src="/aizu-brand-logo.jpg"
               alt="AIZU BRAND HALL"
               width={120}
               height={48}
@@ -103,7 +103,7 @@ export default function ChashuLandingPage() {
         <div className="relative w-full h-full overflow-hidden">
           {/* Main Image */}
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/main-chashu-image-NITVwFft8gXrBwk9cyONFpkErfrzli.jpg"
+            src="/main-chashu-image.jpg"
             alt="ラーメン屋が作る本物のチャーシュー"
             fill
             className="object-cover object-center"
