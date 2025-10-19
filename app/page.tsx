@@ -87,7 +87,7 @@ export default function ChashuLandingPage() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-center">
             <Image
-              src="/aizu-brand-logo.jpg"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%98%E3%83%83%E3%82%BF%E3%83%BC%E7%94%A8%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89%E9%A4%A8%E3%83%AD%E3%82%B4.jpg-ciMUhnsgrxSQlKvO7LflyWckIBx7b3.jpeg"
               alt="AIZU BRAND HALL"
               width={120}
               height={48}
@@ -101,16 +101,14 @@ export default function ChashuLandingPage() {
       {/* Hero Section */}
       <section className="relative h-[40vh] md:h-[50vh] lg:h-[60vh] w-full">
         <div className="relative w-full h-full overflow-hidden">
-          {/* Main Image */}
           <Image
-            src="/main-chashu-image.jpg"
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB_%E3%82%A2%E3%83%BC%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%201-83KlLfUe6L062KKDie5TjVap4ZFyk9.jpg"
             alt="ラーメン屋が作る本物のチャーシュー"
             fill
             className="object-cover object-center"
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         </div>
       </section>
 
@@ -272,7 +270,7 @@ export default function ChashuLandingPage() {
             <Card className="overflow-hidden bg-white border-gray-200 shadow-md">
               <div className="relative aspect-[4/3]">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E8%82%B2%E3%81%A6%E3%81%9F%E3%81%9F%E3%82%8C_%E3%82%A2%E3%83%BC%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%201.jpg-r0vJfyg5MaPar3ylcx1ZNSuENdPGQr.jpeg"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E8%82%B2%E3%81%A6%E3%81%9F%E3%81%9F%E3%82%8C_%E3%82%A2%E3%83%BC%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%201-vwdzQQvVH5Jlph8LIx8nZDvHMXIikJ.jpg"
                   alt="秘伝のタレ"
                   fill
                   className="object-cover"
