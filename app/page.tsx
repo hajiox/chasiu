@@ -1,7 +1,6 @@
 "use client"
 
 import Image from "next/image"
-import mainChashuImage from "@/public/main-chashu-image.jpg"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -104,7 +103,7 @@ export default function ChashuLandingPage() {
         <div className="relative w-full h-full overflow-hidden">
           {/* Main Image */}
           <Image
-            src={mainChashuImage}
+            src="/main-chashu-image.jpg"
             alt="ラーメン屋が作る本物のチャーシュー"
             fill
             className="object-cover object-center"
