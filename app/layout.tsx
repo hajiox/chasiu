@@ -1,9 +1,15 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { GeistSans } from "geist/font/sans"
-import { GeistMono } from "geist/font/mono"
+import { Noto_Sans_JP } from "next/font/google"
 import "./globals.css"
 import Script from "next/script"
+
+const notoSansJP = Noto_Sans_JP({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-sans",
+  display: "swap",
+})
 
 export const metadata: Metadata = {
   title: "会津ブランド館 極上チャーシュー | 楽天月間優良ショップ受賞の本格派",
@@ -44,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ja">
+    <html lang="ja" className={notoSansJP.variable}>
       <head>
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-QF0C5C17LW" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -55,13 +61,6 @@ export default function RootLayout({
             gtag('config', 'G-QF0C5C17LW');
           `}
         </Script>
-        <style>{`
-html {
-  font-family: ${GeistSans.style.fontFamily};
-  --font-sans: ${GeistSans.variable};
-  --font-mono: ${GeistMono.variable};
-}
-        `}</style>
       </head>
       <body>{children}</body>
     </html>
