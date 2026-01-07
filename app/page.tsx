@@ -442,20 +442,20 @@ export default function ChashuLandingPage() {
               <Card className="overflow-hidden bg-white border-gray-200 shadow-md">
                 <div className="relative aspect-square">
                   <Image
-                    src="/images/e3-83-ac-e3-83-88-e3-83-ab-e3-83-88-e6-a5-b5-e5-8e-9a8-e6-9e-9a.jpeg"
-                    alt="極厚カットチャーシュー650g"
+                    src="/images/01amazon-e4-bb-a5-e5-a4-96top-e7-94-bb-e5-83-8f-ef-bc-88-e6-a5-b5-e5-8e-9a8-e6-9e-9a-ef-bc-89-01.jpg"
+                    alt="極厚カットチャーシュー600g"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h4 className="text-xl font-bold mb-3 text-gray-900">レトルトチャーシュー極厚カット650g（8枚）</h4>
+                  <h4 className="text-xl font-bold mb-3 text-gray-900">レトルトチャーシュー極厚カット600g（8枚）</h4>
                   <ul className="text-sm text-gray-700 space-y-2 mb-4">
                     <li>・厚切りで豪快、まさに「ラーメン二郎」を思わせる存在感。</li>
                     <li>・自宅で二郎系を楽しみたい方にピッタリのガッツリ系商品。</li>
                     <li>・常温保存可能で、まとめ買い＆ストックにも便利。</li>
                   </ul>
-                  <p className="text-2xl font-bold text-amber-600">2,800円（税・送料込）</p>
+                  <p className="text-2xl font-bold text-amber-600">2,990円（税・送料込）</p>
                 </CardContent>
               </Card>
 
