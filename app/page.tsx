@@ -314,9 +314,7 @@ export default function ChashuLandingPage() {
       {/* Ingredients Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
-            世界が認める極上素材：スペイン産豚バラ肉
-          </h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">世界基準で選び抜いた、上質な豚バラ肉</h2>
 
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
@@ -339,27 +337,29 @@ export default function ChashuLandingPage() {
             </div>
 
             <div className="text-lg text-gray-700 leading-relaxed space-y-4">
-              <p>当店のチャーシューは、世界的に高品質と評価されるスペイン産豚バラ肉を使用しています。</p>
+              <p>
+                当店のチャーシューは、赤身と脂のバランス、繊維のきめ、加熱耐性まで考慮し、チャーシューに最適な豚バラ肉を厳選して使用しています。
+              </p>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
                 <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                  <h3 className="font-bold text-xl mb-3 text-gray-900">世界第3位の生産国、欧州第1位の輸出国</h3>
+                  <h3 className="font-bold text-xl mb-3 text-gray-900">厳格な基準で管理された豚肉を使用</h3>
                   <p className="text-gray-700">
-                    EUの厳格な基準に基づく品質管理のもと育てられ、安全性と信頼性が確立されています。
+                    衛生管理、トレーサビリティ、品質基準を重視し、安定した品質を確保できる原料のみを採用しています。
                   </p>
                 </div>
 
                 <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
                   <h3 className="font-bold text-xl mb-3 text-gray-900">絶妙な赤身と脂身のバランス</h3>
                   <p className="text-gray-700">
-                    ジューシーで旨味のある食感が特徴。脂肪にはオレイン酸が豊富に含まれ、体に優しい脂質としても注目されています。
+                    ジューシーで旨味のある食感が特徴。加熱しても硬くなりにくく、長時間調理するチャーシューに適した特性を持っています。
                   </p>
                 </div>
 
                 <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                  <h3 className="font-bold text-xl mb-3 text-gray-900">日本市場でも高評価</h3>
+                  <h3 className="font-bold text-xl mb-3 text-gray-900">日本の飲食業界でも高評価</h3>
                   <p className="text-gray-700">
-                    2025年最新データでは、スペイン産豚肉の輸入量が前年比8.69％増。特にラーメン用チャーシューとしての需要が高まり、その豊かな風味と柔らかな食感は日本のラーメン文化とも見事に調和しています。
+                    ラーメン店や専門店の現場で培われた知見をもとに、日本の調理文化に合う原料選定を行っています。
                   </p>
                 </div>
               </div>
