@@ -501,7 +501,7 @@ export default function ChashuLandingPage() {
                     <li>・そのままかけても、漬けて焼いても美味しく召し上がれます。</li>
                     <li>・常温保存が可能で、賞味期限は製造より3ヶ月。</li>
                   </ul>
-                  <p className="text-2xl font-bold text-amber-600">1,500円（税・送料込）</p>
+                  <p className="text-2xl font-bold text-amber-600">1,000円（税・送料込）</p>
                 </CardContent>
               </Card>
             </div>
