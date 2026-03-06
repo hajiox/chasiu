@@ -16,40 +16,40 @@ export default function ChashuLandingPage() {
         "必要な分だけ解凍できるのでとても便利。ラーメンはもちろん、チャーハンや丼物にも使えて重宝しています。味も本格的で家族にも好評でした。",
       rating: 5,
       source: "楽天",
-      product: "冷凍カット済み800g",
+      product: "冷凍カット済み700g",
     },
     {
       comment:
         "カット済みで使いやすく、2枚ずつの個包装がありがたいです。温めずそのままでも美味しく食べられました。リピート決定です。",
       rating: 5,
       source: "楽天",
-      product: "冷凍カット済み800g",
+      product: "冷凍カット済み700g",
     },
     {
       comment:
         "思ったより薄切りでしたが、ラーメンのトッピングにはちょうど良い厚さ。お酒のおつまみにも使いやすく、便利な商品だと思います。",
       rating: 4,
       source: "楽天",
-      product: "冷凍カット済み800g",
+      product: "冷凍カット済み700g",
     },
     {
       comment:
         "見た目は不揃いでも味は抜群。200gずつの小分けなので使いやすく、冷凍庫に常備しています。コスパが良くて助かります。",
       rating: 5,
       source: "楽天",
-      product: "冷凍訳あり1kg",
+      product: "冷凍訳あり800g",
     },
     {
       comment: "子どもが大好きであっという間になくなります。量がしっかりあるので家族みんなで楽しめるのが嬉しいです。",
       rating: 5,
       source: "楽天",
-      product: "冷凍訳あり1kg",
+      product: "冷凍訳あり800g",
     },
     {
       comment: "タレの味が絶妙でご飯が進みます。お弁当のおかずや夜食にもピッタリで、買って正解でした。",
       rating: 5,
       source: "楽天",
-      product: "冷凍訳あり1kg",
+      product: "冷凍訳あり800g",
     },
     {
       comment:
@@ -394,15 +394,15 @@ export default function ChashuLandingPage() {
               <Card className="overflow-hidden bg-white border-gray-200 shadow-md">
                 <div className="relative aspect-square">
                   <Image
-                    src="/images/e5-86-b7-e5-87-8d-ef-bc-88-e3-82-ab-e3-83-83-e3-83-88-e6-b8-88-e3-81-bf-ef-bc-89-01.jpeg"
-                    alt="カット済みチャーシュー800g"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E7%94%A8%E3%82%B5%E3%83%A0%E3%83%8D%E3%82%A4%E3%83%AB%E7%94%BB%E5%83%8F%EF%BC%88%E3%82%AB%E3%83%83%E3%83%88%E6%B8%88%E3%81%BF700%EF%BC%89-01-ApOxBGR3NDAg8z77vcWgKUXg8rdDH5.jpg"
+                    alt="カット済みチャーシュー700g"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <CardContent className="p-6">
                   <h4 className="text-xl font-bold mb-3 text-gray-900">
-                    ラーメン屋が作る本物のチャーシューカット済み800g
+                    ラーメン屋が作る本物のチャーシューカット済み700g
                   </h4>
                   <ul className="text-sm text-gray-700 space-y-2 mb-4">
                     <li>・扱いやすいカット済み＆小分け包装で、必要な分だけ解凍してすぐ使える便利さ。</li>
@@ -416,17 +416,17 @@ export default function ChashuLandingPage() {
               <Card className="overflow-hidden bg-white border-gray-200 shadow-md">
                 <div className="relative aspect-square">
                   <Image
-                    src="/images/e5-86-b7-e5-87-8d-ef-bc-88-e8-a8-b3-e3-82-a2-e3-83-aa-ef-bc-89-01.jpeg"
-                    alt="訳ありチャーシュー1kg"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E6%A5%BD%E5%A4%A9%E4%BB%96%E7%94%A8TOP%E7%94%BB%E5%83%8F%EF%BC%88%E8%A8%B3%E3%82%A2%E3%83%AA800%EF%BC%89-01-S02Ow7SufltnB2bfcVGjPAN8e5xs9B.jpg"
+                    alt="訳ありチャーシュー800g"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h4 className="text-xl font-bold mb-3 text-gray-900">ラーメン屋が作る本物のチャーシュー訳あり1kg</h4>
+                  <h4 className="text-xl font-bold mb-3 text-gray-900">ラーメン屋が作る本物のチャーシュー訳あり800g</h4>
                   <ul className="text-sm text-gray-700 space-y-2 mb-4">
                     <li>・形が不揃いなだけで、味・品質は正規品と同じ。</li>
-                    <li>・200gの小分けパックで保存も調理もラク。</li>
+                    <li>・200g×4パックの小分けで保存も調理もラク。</li>
                     <li>・とにかく量を楽しみたい方におすすめ。</li>
                   </ul>
                   <p className="text-2xl font-bold text-amber-600">4,290円（税・送料込）</p>
@@ -501,7 +501,7 @@ export default function ChashuLandingPage() {
                     <li>・そのままかけても、漬けて焼いても美味しく召し上がれます。</li>
                     <li>・常温保存が可能で、賞味期限は製造より3ヶ月。</li>
                   </ul>
-                  <p className="text-2xl font-bold text-amber-600">1,500円（税・送料込）</p>
+                  <p className="text-2xl font-bold text-amber-600">1,000円（税・送料込）</p>
                 </CardContent>
               </Card>
             </div>
