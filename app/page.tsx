@@ -321,7 +321,7 @@ export default function ChashuLandingPage() {
               <div className="relative aspect-[3/2] rounded-lg overflow-hidden shadow-md">
                 <Image
                   src="/images/e8-b1-9a-e8-88-8e-e3-81-a8-e7-94-9f-e7-94-a3-e8-80-85-ef-bc-88-e7-94-9f-e6-88-90-ef-bc-89.jpeg"
-                  alt="スペイン産豚肉の生産者と農場"
+                  alt="カナダ産豚肉の生産者と農場"
                   fill
                   className="object-cover"
                 />
@@ -338,7 +338,7 @@ export default function ChashuLandingPage() {
 
             <div className="text-lg text-gray-700 leading-relaxed space-y-4">
               <p>
-                当店のチャーシューは、赤身と脂のバランス、繊維のきめ、加熱耐性まで考慮し、チャーシューに最適な豚バラ肉を厳選して使用しています。
+                当店のチャーシューは、カナダ産チルド豚バラ肉を使用しています。赤身と脂のバランス、繊維のきめ、加熱耐性まで考慮し、チャーシューに最適な豚バラ肉を厳選しています。
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
