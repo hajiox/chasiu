@@ -27,9 +27,10 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/ogp-image-new.jpg",
-        width: 1200,
-        height: 630,
+        width: 1217,
+        height: 647,
         alt: "会津ブランド館の極上チャーシュー - 箸で持ち上げられた美味しそうなチャーシュー",
+        type: "image/jpeg",
       },
     ],
     locale: "ja_JP",
@@ -38,9 +39,18 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@Aizu_Brand_Kan",
+    creator: "@Aizu_Brand_Kan",
     title: "会津ブランド館 極上チャーシュー | 楽天月間優良ショップ受賞",
     description: "楽天市場月間優良ショップ受賞！会津の老舗が作る極上チャーシューをご家庭で。",
-    images: ["/ogp-image-new.jpg"],
+    images: [
+      {
+        url: "/ogp-image-new.jpg",
+        alt: "会津ブランド館の極上チャーシュー",
+        width: 1217,
+        height: 647,
+      },
+    ],
   },
   keywords:
     "チャーシュー,会津ブランド館,楽天月間優良ショップ,冷凍チャーシュー,レトルトチャーシュー,福島県,会津若松,本格派,職人,ラーメン具材",
